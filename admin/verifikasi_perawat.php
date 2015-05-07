@@ -2,9 +2,10 @@
       <section class="wrapper">
           <div class="col-lg-12">  
             <br><br><br>
-                      <form class="form-inline" role="form" method="get"  action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                      <form class="form-inline" role="form" method="get"  action="<?php echo $_SERVER['PHP_SELF']?>">
                            <div class="form-group">
-                              <input type="email" name="nama" class="form-control" id="exampleInputEmail2" placeholder="Masukan nama perawat">
+                              <input type="hidden" name="pages" value="verifikasi_perawat">
+                              <input type="text" name="nama" class="form-control" id="exampleInputEmail2" placeholder="Masukan nama perawat">
                           </div>
                           <button type="cari" class="btn btn-theme">cari</button>
                       </form>
