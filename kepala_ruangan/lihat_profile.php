@@ -42,7 +42,7 @@
                               </div>
                           </div>
                     </form>
-                    <a  href="#">Lihat Sertifikasi</a>
+                    <a  href="index.php?pages=lihat_sertifikasi">Lihat Sertifikasi</a>
                   </div>
 
               </div>

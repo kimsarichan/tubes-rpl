@@ -163,6 +163,9 @@
               case "input_sertifikasi":
               include "input_sertifikasi.php";
               break;
+              case "lihat_sertifikasi":
+              include "lihat_sertifikasi.php";
+              break;
               case "input_pasien":
               include "input_pasien.php";
               break;
