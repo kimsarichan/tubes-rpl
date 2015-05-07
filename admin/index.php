@@ -171,6 +171,10 @@ if(!isset($_SESSION['nip'])){
               case "lihatdata_perawat":
               include "lihatdata_perawat.php";
               break;
+              case "edit_perawat":
+              include "edit_data_perawat.php";
+              break;
+
            }
       ?>
       
