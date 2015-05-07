@@ -34,6 +34,10 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	<div class="col-md-4">
+	  	</div>
+	  	<div class="col-md-4">
+	  	</div>
+	  	<div class="col-md-4">
 	  		<br><br><br><br>
 	  		
 		      <form class="form-login" method="POST" action="pLogin.php">

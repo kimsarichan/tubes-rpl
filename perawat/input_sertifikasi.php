@@ -27,22 +27,16 @@
                               <div class="col-sm-10">
                                   <input type="text" class="form-control" name="id">
                               </div>
-
-                          </div>
-                          <div class="form-group">
-                                <input type="file" class="form-control"  placeholder="" name="sertifikasi">
+                              <br><br><br>
+                            <div class="col-sm-10">
+                              <input type="file" class="form-control"  placeholder="" name="sertifikasi">
                             </div>
-                            <input type="submit" class="upload btn btn-theme">Choose File</button>
-
-                        </form>
-
-                          <form class="form-inline" role="form">
-                            <br><br>
-                            
-
+                            <br><br><br>
+                            <div class="col-sm-10">
+                            <input type="submit" class="upload btn btn-theme">
+                          </div>
                           </div>
                         </form>
-
                     </div>
                   </div>
                 </div>

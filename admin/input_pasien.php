@@ -1,8 +1,3 @@
-
-            <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-      <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
             <h1>Input Pasien</h1>
@@ -21,12 +16,20 @@
                                   <input type="text" class="form-control">
                               </div>
                               <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Tanggal Masuk</label>
+                              <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
+                              <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="one">Laki Laki</option>
+                                    <option value="two">Perempuan</option>
+                                </select>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Diagnosis</label>
                               <div class="col-sm-10">
                                   <input type="text" class="form-control">
                               </div>
                               <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Diagnosis</label>
+                              <label class="col-sm-2 col-sm-2 control-label">Ruangan</label>
                               <div class="col-sm-10">
                                   <input type="text" class="form-control">
                               </div>

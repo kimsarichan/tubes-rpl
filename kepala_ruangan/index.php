@@ -16,13 +16,21 @@
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
-    
+    <link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
     <script src="assets/js/chart-master/Chart.js"></script>
-    
+    <!--datepicker-->
+      <!-- Date Picker -->
+    <link rel="stylesheet" href="assets/css/calender.css" />
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script type="text/javascript" src="js/calendar.js"></script>
+      <link href="assets/css/tabacc/tabacc.css" rel="stylesheet" />
+      <link href="assets/css/tabacc/themes/minimal.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -140,6 +148,9 @@
               case "input_jadwal":
               include "imput_jadwal.php";
               break;
+              case "input_jadwal2":
+              include "imput_jadwal2.php";
+              break;
               case "grafik_pasien":
               include "grafik_pasien.php";
               break;
@@ -196,9 +207,9 @@
         $(document).ready(function () {
         var unique_id = $.gritter.add({
             // (string | mandatory) the heading of the notification
-            title: 'Welcome to Dashgum!',
+            title: 'SIDRA!',
             // (string | mandatory) the text inside the notification
-            text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo. Free version for <a href="http://blacktie.co" target="_blank" style="color:#ffd777">BlackTie.co</a>.',
+            text: 'Welcome to SIDRA',
             // (string | optional) the image to display on the left
             image: 'assets/img/ui-sam.jpg',
             // (bool | optional) if you want it to fade out on its own or just sit there
@@ -247,7 +258,21 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
-  
+    <!--test datepicker java script-->
+    <script type="text/javascript" src="assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="assets/js/locales/bootstrap-datetimepicker.id.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+     $('.form_date').datetimepicker({
+            language:  'id',
+            weekStart: 1,
+            todayBtn:  1,
+      autoclose: 1,
+      todayHighlight: 1,
+      startView: 2,
+      minView: 2,
+      forceParse: 0
+        });
+    </script>
 
   </body>
 </html>
