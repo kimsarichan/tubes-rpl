@@ -169,6 +169,9 @@ if(!isset($_SESSION['nip'])){
               case "input_sertifikasi":
               include "input_sertifikasi.php";
               break;
+              case "lihat_sertifikasi":
+              include "lihat_sertifikasi.php";
+              break;
             }
       ?>
       
