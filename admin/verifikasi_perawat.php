@@ -1,4 +1,4 @@
-<section id="main-content" style="height:800px">
+<section id="portfolio"  style="height:800px">
       <section class="wrapper">
           <div class="col-lg-12">  
             <br><br><br>
@@ -38,7 +38,7 @@
                                   <td>$no</td>
                                   <td>$data[nama]</td>
                                   <td >$data[NIP]</td>
-                                  <td><a href='#'>Verifikasi</a></td>
+                                  <td><a href='#tesver' class='portfolio-link' data-toggle='modal'>Verifikasi</a></td>
                               </tr>";   
                               $no++; 
                               }
@@ -51,7 +51,29 @@
             </div>
 
         </div><!-- /row -->
-      
+    <!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="tesever" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>TES</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     </section><! --/wrapper -->
 </section><!-- /MAIN CONTENT -->
