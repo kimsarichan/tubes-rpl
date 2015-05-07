@@ -17,35 +17,27 @@
                             <table class="table table-bordered table-striped table-condensed">
                               <thead>
                               <tr>
-                                  <th>NO</th>
-                                  <th>Nama Pasien</th>
-                                  <th >Jenis Kelamin</th>
-                                  <th >Umur </th>
-                                  <th >Diagnosa</th>
+                                  <th>No</th>
+                                  <th>Nama Pengirim</th>
+                                  <th >Pesan</th>
+                                  <th >Status</th>
                               </tr>
                               </thead>
                               <tbody>
-                              <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td ></td>
-                                  <td ></td>
-                                  <td></td>
-                              </tr>
-                              <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td ></td>
-                                  <td ></td>
-                                  <td></td>
-                              </tr>
-                              <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td ></td>
-                                  <td ></td>
-                                  <td></td>
-                              </tr>
+                              <?php
+                                include"../koneksi.php";
+                                $select=mysql_query("select p.pesan,p.status,pe.nama from pesan p join perawat pe on (pe.nip=p.nip_pengirim) where nip_penerima='$_SESSION[nip]' order by idPesan desc");
+                                $no=1;
+                                while($data=mysql_fetch_array($select)){
+                                  echo "<tr>
+                                  <td>$no</td>
+                                  <td>$data[2]</td>
+                                  <td >$data[0]</td>
+                                  <td >$data[1]</td>
+                                  </tr>";
+                                  $no++;
+                                }
+                              ?>
                               </tbody>
                           </table>
                           <div class="col-lg-4"></div>  

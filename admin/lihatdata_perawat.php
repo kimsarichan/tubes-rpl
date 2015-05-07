@@ -38,7 +38,7 @@
                                   <td>$no</td>
                                   <td>$data[nama]</td>
                                   <td >$data[NIP]</td>
-                                  <td><a href='#'>Detail</a></td>
+                                  <td><a href='#'>Detail</a>|<a href='$_SERVER[PHP_SELF]?pages=edit_perawat&&nip=$data[NIP]'>Edit</a>|<a href='proses/p_delete_perawat.php?nip=$data[NIP]'>Delete</a></td>
                               </tr>";   
                               $no++; 
                               }
