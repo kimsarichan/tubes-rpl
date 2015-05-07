@@ -3,7 +3,7 @@ include "../koneksi.php";
 if(!isset($_SESSION['nip'])){
 	echo "Anda belum melakukan login!";
 }else{
-	$query=mysql_query("select * from perawat where nip=".$_SESSION['nip']." LIMIT 1");
+	$query=mysql_query("select * from perawat where nip='".$_SESSION['nip']."' LIMIT 1");
 	$data=mysql_fetch_array($query);
 	$nama=$data[1];
 	$nip=$data[0];
@@ -65,7 +65,7 @@ if(!isset($_SESSION['nip'])){
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="../logout.php">Logout</a></li>
             	</ul>
             </div>
         </header>

@@ -9,6 +9,7 @@
 	$rename=$idsertifikasi.$_SESSION['nip'];
 	$dir="../sertifikasi/";
 	$target=$dir.$rename.".pdf";
+	$base_url=explode("?", $_SERVER['HTTP_REFERER']);
 	echo $type;
 	if($type=="application/pdf"){
 	  	if (move_uploaded_file($tmp, $target)) {
@@ -17,9 +18,9 @@
 	  		if($data['jum']==0){
 		  		$insert=mysql_query("insert into sertifikasi (NIP,namaFile,idsertifikasi) values ('$_SESSION[nip]','$name','$idsertifikasi')");
 		  		if($insert){
-		  			header ("Location: http://localhost/sidra/perawat/index.php?pages=input_sertifikasi&&status=success");
+		  			header ("Location: $base_url[0]?pages=input_sertifikasi&&status=success");
 		  		}else{
-		  			header ("Location: http://localhost/sidra/perawat/index.php?pages=input_sertifikasi&&status=failed");
+		  			header ("Location: $base_url[0]?pages=input_sertifikasi&&status=failed");
 		  			if(file_exists($rename)){
 		  				unlink($rename);
 		  			}
@@ -27,9 +28,9 @@
 	  		}else{
 	  			$update=mysql_query("update sertifikasi set idsertifikasi='$idsertifikasi', namaFile='$name' where NIP='$_SESSION[nip]'");
 	  			if($update){
-		  			header ("Location: http://localhost/sidra/perawat/index.php?pages=input_sertifikasi&&status=success");
+		  			header ("Location: $base_url[0]?pages=input_sertifikasi&&status=success");
 		  		}else{
-		  			header ("Location: http://localhost/sidra/perawat/index.php?pages=input_sertifikasi&&status=failed");
+		  			header ("Location: $base_url[0]?pages=input_sertifikasi&&status=failed");
 		  		}
 	  		}
 	    } else {
