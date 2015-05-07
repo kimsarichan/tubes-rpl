@@ -2,9 +2,9 @@
       <section class="wrapper">
           <div class="col-lg-12">  
             <br><br><br>
-                      <form class="form-inline" role="form">
+                      <form class="form-inline" role="form" method="get"  action="<?php echo $_SERVER['PHP_SELF'] ?>">
                            <div class="form-group">
-                              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Masukan nama perawat">
+                              <input type="email" name="nama" class="form-control" id="exampleInputEmail2" placeholder="Masukan nama perawat">
                           </div>
                           <button type="cari" class="btn btn-theme">cari</button>
                       </form>
@@ -22,13 +22,27 @@
                                   <th >Konfirmasi </th>
                               </tr>
                               </thead>
+                              <?php
+                                include "../koneksi.php";
+                                if(isset($_GET['nama'])){
+                                $nama=$_GET['nama'];
+                                }else{
+                                    $nama="";
+                                }
+                                $select=mysql_query("select*from perawat where status=false and nama like '%$nama%'");
+                                $no=1;
+                                while($data=mysql_fetch_array($select)){
+                                 echo  "<tr>
+                                  <td>$no</td>
+                                  <td>$data[nama]</td>
+                                  <td >$data[NIP]</td>
+                                  <td><a href='#'>Verifikasi</a></td>
+                              </tr>";   
+                              $no++; 
+                                }
+                              ?>
                               <tbody>
-                              <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td ></td>
-                                  <td ></td>
-                              </tr>
+                              
                               <tr>
                                   <td></td>
                                   <td></td>

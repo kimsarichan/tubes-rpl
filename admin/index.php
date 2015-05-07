@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<?php session_start();
+include "../koneksi.php";
+if(!isset($_SESSION['nip'])){
+  echo "Anda belum melakukan login!";
+}else{
+  if($_SESSION['oto']!="admin"){
+    echo "anda bukan perawat biasa";
+  }else{
+  $query=mysql_query("select * from perawat where nip='".$_SESSION['nip']."' LIMIT 1");
+  $data=mysql_fetch_array($query);
+  $nama=$data[1];
+  $nip=$data[0];
+  $tglLahir=$data[2];
+  $jk=$data[3];
+  $alamat=$data[4];
+  $email=$data['email'];
+  $jabatan=$data['jabatan'];
+  $noTelepon=$data['noTelepon'];
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -49,7 +68,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="../logout.php">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -232,3 +251,6 @@
 
   </body>
 </html>
+<?php }
+}
+?>
