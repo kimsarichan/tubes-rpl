@@ -1,7 +1,7 @@
 <section id="main-content" style="height:800px">
       <section class="wrapper">
             <div class="col-lg-12">    
-                      <h4><i class="fa fa-angle-right"></i> Table Pasien </h4>
+                      <h4><i class="fa fa-angle-right"></i> Lihat Sertifikasi </h4>
                           <section id="unseen">
                             <table class="table table-bordered table-striped table-condensed">
                               <thead>
@@ -30,7 +30,6 @@
                                   <td></td>
                                   <td ></td>
                                   <td ></td>
-                                  <td></td>
                               </tr>
                               </tbody>
                           </table>
