@@ -3,6 +3,9 @@ include "../koneksi.php";
 if(!isset($_SESSION['nip'])){
 	echo "Anda belum melakukan login!";
 }else{
+  if($_SESSION['oto']!="normal"){
+    echo "anda bukan perawat biasa";
+  }else{
 	$query=mysql_query("select * from perawat where nip='".$_SESSION['nip']."' LIMIT 1");
 	$data=mysql_fetch_array($query);
 	$nama=$data[1];
@@ -262,4 +265,6 @@ if(!isset($_SESSION['nip'])){
 
   </body>
 </html>
-<?php } ?>
+<?php }
+}
+?>

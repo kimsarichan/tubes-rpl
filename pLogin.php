@@ -10,10 +10,14 @@ $ex=explode("/", $_SERVER['PHP_SELF']);
 if($sum>0){
 	$_SESSION['nip']=$nip;
 	$_SESSION['oto']=$data['otoritas'];
-	header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/perawat");
+	if($_SESSION['oto']=="admin"){
+		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/admin");	
+	}else if($_SESSION['oto']=="kepalaPerawat"){
+		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/kepala_perawat");
+	}else{
+		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/perawat");
+	}
 }else{
 	header("Location:$_SERVER[HTTP_REFERER]?status=failed");
 }
-
-
 ?>

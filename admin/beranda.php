@@ -11,7 +11,7 @@
 
             </div><!-- col-lg-4 -->
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
-               <h2>Admin N</h2>
+               <h2>Admin <?php echo $nama ?></h2>
                <button type="button" class="btn btn-theme03 "style="height : 50px;width :150px">USER MANUAL</button>
               </div>
           </div>
