@@ -1,3 +1,19 @@
+<?php session_start();
+include "../koneksi.php";
+if(!isset($_SESSION['nip'])){
+	echo "Anda belum melakukan login!";
+}else{
+	$query=mysql_query("select * from perawat where nip=".$_SESSION['nip']." LIMIT 1");
+	$data=mysql_fetch_array($query);
+	$nama=$data[1];
+	$nip=$data[0];
+	$tglLahir=$data[2];
+	$jk=$data[3];
+	$alamat=$data[4];
+	$email=$data['email'];
+	$jabatan=$data['jabatan'];
+	$noTelepon=$data['noTelepon'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -70,7 +86,7 @@
                     <td style="width:10%"></td>
                     <td><p class="left" width="60"><a href="profile.html"><img src="assets/img/ui-sam.jpg"width="60"></a></p></td>
                     <td style="width:10%"></td>
-                    <td><h5>Perawat n</h5></td>
+                    <td><h5><?php echo $nama; ?></h5></td>
                   </tr>
                   </table>
                     
@@ -246,3 +262,4 @@
 
   </body>
 </html>
+<?php } ?>

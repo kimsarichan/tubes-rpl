@@ -36,8 +36,8 @@
 	  	<div class="col-md-4">
 	  		<br><br><br><br>
 	  		
-		      <form class="form-login" action="index.html">
-		        <h2 class="form-login-heading">Log in </h2>
+		      <form class="form-login" method="POST" action="pLogin.php">
+		        <h2 class="form-login-heading">Log in <?php echo $_SERVER['REQUEST_URI'] ?> </h2>
 		        <div class="login-wrap">
 		            <input type="text" class="form-control" placeholder="Usernames" autofocus>
 		            <br>
@@ -48,7 +48,7 @@
 		
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN </button>
 		            <hr>
 		          
 		            <div class="registration">

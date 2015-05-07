@@ -30,14 +30,14 @@
                                   <td></td>
                                   <td ></td>
                                   <td ></td>
-                                  <td></td>
+                                  <td><a href="">Konfirmasi</a></td>
                               </tr>
                               <tr>
                                   <td></td>
                                   <td></td>
                                   <td ></td>
                                   <td ></td>
-                                  <td></td>
+                                  <td>Confirmed</td>
                               </tr>
                               <tr>
                                   <td></td>

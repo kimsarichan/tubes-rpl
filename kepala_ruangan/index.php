@@ -92,9 +92,11 @@
                       </a>
                     </li>
                     <li class="sub-menu">
-                      <a  href="index.php?pages=lihat_jadwal">
-                          <span>Lihat Jadwal</span>
-                      </a>
+                      <a  href=""> Penjadwalan</a>
+                         <ul class="sub">
+                            <li><a  href="index.php?pages=input_jadwal">Input Jadwal</a></li>
+                            <li><a  href="login.html">Ubah Jadwal</a></li>
+                          </ul>
                     </li>
                     <li class="sub-menu">
                       <a  href="index.php?pages=lihat_pasien">
@@ -135,8 +137,8 @@
               case "lihat_profile":
               include "lihat_profile.php";
               break;
-              case "lihat_jadwal":
-              include "lihat_jadwal.php";
+              case "input_jadwal":
+              include "imput_jadwal.php";
               break;
               case "grafik_pasien":
               include "grafik_pasien.php";
@@ -149,6 +151,9 @@
               break;
               case "input_sertifikasi":
               include "input_sertifikasi.php";
+              break;
+              case "input_pasien":
+              include "input_pasien.php";
               break;
             }
       ?>
