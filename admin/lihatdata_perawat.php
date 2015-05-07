@@ -38,7 +38,7 @@
                                   <td>$no</td>
                                   <td>$data[nama]</td>
                                   <td >$data[NIP]</td>
-                                  <td><a href='#'>Verifikasi</a></td>
+                                  <td><a href='#'>Detail</a></td>
                               </tr>";   
                               $no++; 
                               }

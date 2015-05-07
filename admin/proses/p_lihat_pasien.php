@@ -9,14 +9,14 @@ if(isset($_GET['nama'])){
    $select=mysql_query("select*from pasien where nama like '%$nama%' order by idPasien asc");
    while($data=mysql_fetch_array($select)){
         if($data['jenisKelamin']=="l"){
-          $jk="laki-laki";
+          $jenisKelamin="Laki-laki";
         }else if($data['jenisKelamin']=="p"){
-          $jk="Perempuan";
+          $jenisKelamin="Perempuan";
         }
         echo "<tr>
         <td>".$no."</td>
         <td>".$data['nama']."</td>
-        <td >".$jk."</td>
+        <td >".$jenisKelamin."</td>
         <td >".$data['umur']."</td>
         <td>".$data['diagnosis']."</td>
         </tr>";

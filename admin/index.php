@@ -155,6 +155,12 @@ if(!isset($_SESSION['nip'])){
               case "input_pasien":
               include "input_pasien.php";
               break;
+              case "lihat_pasien":
+              include "lihat_pasien.php";
+              break;
+              case "lihatdata_perawat":
+              include "lihatdata_perawat.php";
+              break;
            }
       ?>
       
