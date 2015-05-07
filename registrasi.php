@@ -80,6 +80,10 @@
 	                              <div class="col-sm-10">
 	                                  <input type="text" class="form-control">
 	                              </div>
+	                              <div class="col-sm-12">
+	                              	<br>
+		                              <input type="file" class="form-control"  placeholder="" name="upload_foto">
+		                            </div>
 	                          </div>
 	                    </form>
 	                    <button type="button" class="btn btn-theme03 " style = "width :150px">Apply</button>
