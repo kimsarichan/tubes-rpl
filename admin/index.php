@@ -118,7 +118,7 @@ if(!isset($_SESSION['nip'])){
                       <a  href=""> Manajemen Ruangan</a>
                          <ul class="sub">
                             <li><a  href="index.php?pages=input_ruangan">Tambah Ruangan</a></li>
-                            <li><a  href="index.php?pages=edit_ruangan">Edit Ruangan </a></li>
+                            <li><a  href="index.php?pages=edit_ruangan">Lihat Ruangan </a></li>
                           </ul>
                     </li>
                     <li class="sub-menu">
@@ -159,8 +159,8 @@ if(!isset($_SESSION['nip'])){
               case "ubahdata_perawat_setelahdicari":
               include "ubahdata_perawat_setelahdicari";
               break;
-              case "edit_ruangan":
-              include "edit_ruangan.php";
+              case "lihat_ruangan":
+              include "lihat_ruangan.php";
               break;
               case "input_ruangan":
               include "input_ruangan.php";
