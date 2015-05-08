@@ -3,7 +3,7 @@ include "../koneksi.php";
 if(!isset($_SESSION['nip'])){
 	echo "Anda belum melakukan login!";
 }else{
-  if($_SESSION['oto']=="admin" and $_SESSION['oto']=="kepalaruang"){
+  if($_SESSION['oto']=="admin" or $_SESSION['oto']=="kepalaRuang"){
     echo "anda bukan perawat biasa";
   }else{
 	$query=mysql_query("select * from perawat where nip='".$_SESSION['nip']."' LIMIT 1");

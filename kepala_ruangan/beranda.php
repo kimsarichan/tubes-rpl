@@ -11,8 +11,8 @@
 
             </div><!-- col-lg-4 -->
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
-               <h2>Perawat n</h2>
-               <h2>1311456789</h2>
+               <h2><?php echo $nama ?></h2>
+               <h2><?php echo $nip ?></h2>
                <h2>Ruang 104</h2>
                <h2>Perawat UGD</h2>
                <button type="button" class="btn btn-theme03 "style="height : 50px;width :150px">USER MANUAL</button>
