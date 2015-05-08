@@ -38,12 +38,25 @@
 		  		 <div class="row mt">
 	              <div class="col-lg-8">
 	                  <div class="form-panel">
+	                  	<?php
+	                  	if(isset($_GET['status'])){
+                          if($_GET['status']=="nodata"){
+                            echo "isi bagian yang nama, tanggal, jenis kelaminmemail,notelepon,password";
+                          }else if ($_GET['status']=="failed"){
+                            echo "Pendaftaran gagal, silahkan coba lagi";
+                          }else if ($_GET['status']=="wp"){
+                            echo "Password dan konformasi password salah, silahkan coba lagi";
+                          }
+                        }else{
+                          echo "";
+                        }
+	                  	?>
 	                  	<h1>Registrasi </h1>
-	                    <form class="form-horizontal style-form" method="get">
+	                    <form class="form-horizontal style-form" method="post" action="p_registrasi.php">
 	                          <div class="form-group">
 	                              <label class="col-sm-2 col-sm-2 control-label">Nama</label>
 	                              <div class="col-sm-10">
-	                                  <input type="nama" class="form-control">
+	                                  <input type="text" name="nama" class="form-control">
 	                              </div>
 	                              <br><br><br>
 	                              <label class="col-sm-2 col-sm-2 control-label">Password</label>
@@ -53,40 +66,41 @@
 	                              <br><br><br>
 	                              <label class="col-sm-2 col-sm-2 control-label">Retype Passwod</label>
 	                              <div class="col-sm-10">
-	                                  <input type="password" name="password" class="form-control">
+	                                  <input type="password" name="retype" class="form-control">
 	                              </div>
 	                              <br><br><br>
-	                              <label class="col-sm-2 col-sm-2 control-label">NIP</label>
+	                              <label class="col-sm-2 col-sm-2 control-label">Alamat</label>
 	                              <div class="col-sm-10">
-	                                  <input type="text" class="form-control">
+	                                  <input type="text" name="alamat" class="form-control">
 	                              </div>
 	                              <br><br><br>
 	                              <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
 	                              <div class="col-sm-10">
-	                                  <input type="text" class="form-control">
+	                                  <input type="text" name="jk" class="form-control">
 	                              </div>
 	                              <br><br><br>
 	                              <label class="col-sm-2 col-sm-2 control-label">Email</label>
 	                              <div class="col-sm-10">
-	                                  <input type="text" class="form-control">
+	                                  <input type="text" name="email" class="form-control">
 	                              </div>
 	                              <br><br><br>
 	                              <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
 	                              <div class="col-sm-10">
-	                                  <input type="text" class="form-control">
+	                                  <input type="text" name="tanggal" class="form-control">
 	                              </div>
 	                              <br><br><br>
-	                              <label class="col-sm-2 col-sm-2 control-label">Jabatan</label>
+	                              <label class="col-sm-2 col-sm-2 control-label">No Telepon</label>
 	                              <div class="col-sm-10">
-	                                  <input type="text" class="form-control">
+	                                  <input type="text" name="noTelepon" class="form-control">
 	                              </div>
 	                              <div class="col-sm-12">
 	                              	<br>
 		                              <input type="file" class="form-control"  placeholder="" name="upload_foto">
 		                            </div>
 	                          </div>
+	                          <button type="submit" class="btn btn-theme03 " style = "width :150px">Apply</button>
 	                    </form>
-	                    <button type="button" class="btn btn-theme03 " style = "width :150px">Apply</button>
+	                    
 	                  </div>
 
               </div>
