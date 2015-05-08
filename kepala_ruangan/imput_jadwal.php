@@ -6,14 +6,14 @@
         <div class="form-panel">
           <form class="form-horizontal style-form" method="get">
                 <div class="form-group">
-                    <label class="col-sm-2 col-sm-2 control-label">Nama</label>
+                    <label class="col-sm-2 col-sm-2 control-label">Tanggal</label>
                     <div class="input-group date form_date col-sm-8" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style ="margin-left=50px;">
                         <input class="form-control" size="10" type="text" name="dari">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     </div>
                     <br>
                     <input type="hidden" id="dtp_input2" value=""/>
-                    <label class="col-sm-2 col-sm-2 control-label">Umur </label>
+                    <label class="col-sm-2 col-sm-2 control-label">Shift </label>
                     <div class="col-sm-10">
                         <select class="form-control">
                                 <option value="one">9:00-15:00</option>

@@ -1,4 +1,4 @@
-<section id="portfolio"  style="height:800px">
+<section id="main-content"  style="height:800px">
       <section class="wrapper">
           <div class="col-lg-12">  
             <br><br><br>
@@ -11,7 +11,7 @@
                       </form>
               </div><!-- /col-lg-12 -->
             <div class="col-lg-12">    
-                                   
+                                   <p>test</p>
                       <h4><i class="fa fa-angle-right"></i> Table Perawat </h4>
                           <section id="unseen">
                             <table class="table table-bordered table-striped table-condensed">
@@ -38,7 +38,7 @@
                                   <td>$no</td>
                                   <td>$data[nama]</td>
                                   <td >$data[NIP]</td>
-                                  <td><a href='#tesver' class='portfolio-link' data-toggle='modal'>Verifikasi</a></td>
+                                  <td><a href='#openModal' >Verifikasi</a></td>
                               </tr>";   
                               $no++; 
                               }
@@ -51,29 +51,118 @@
             </div>
 
         </div><!-- /row -->
-    <!-- Portfolio Modal 8 -->
-    <div class="portfolio-modal modal fade" id="tesever" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>TES</h2>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+   
+
+<div id="openModal" class="modalDialog" tabindex="-1" role="dialog" aria-hidden="true">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Verifikasi </h2>
+     <div class="row mt">
+              <div class="col-lg-8">
+                    <form class="form-horizontal style-form" method="get">
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Nama</label>
+                              <div class="col-sm-10">
+                                  <input type="nama" placeholder="perawat n"class="form-control" disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">NIP</label>
+                              <div class="col-sm-10">
+                                  <input type="text" placeholder="113234532"class="form-control" >
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
+                              <div class="col-sm-10">
+                                  <input type="text" placeholder="Perempuan"class="form-control"disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Email</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="n@gmail.com" class="form-control"disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="11/11/1996" class="form-control"disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Jabatan</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="perawat UGD" class="form-control"disabled>
+                              </div>
+                               <br><br><br>
+                                <label class="col-sm-2 col-sm-2 control-label">Tanggal Masuk</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="8/5/2015" class="form-control">
+                              </div>
+                               <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Masa Kerja</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="" class="form-control">
+                              </div>
+                               <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Ruangan</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="" class="form-control">
+                              </div>
+
+                          </div>
+                           <button type="button" class="btn btn-theme05 " style = "width :150px">Verifikasi</button>
+                    </form>
         </div>
-    </div>
+  </div>
+</div>
+<style type="text/css">
+    .modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
 
+.modalDialog > div {
+  width: 800px;
+  position: relative;
+  margin: 1% auto;
+  padding: 5px 20px 13px 20px;
+  background: #fff;
+}
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
 
+.close:hover { background: #00d9ff; }
+</style>
+<script type="text/javascript">
+  var dialog = document.getElementById('modalDialog');
+  dialog.show();
+</script>
     </section><! --/wrapper -->
 </section><!-- /MAIN CONTENT -->
