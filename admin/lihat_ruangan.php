@@ -1,7 +1,7 @@
 <section id="main-content" style="height:800px">
       <section class="wrapper">
             <div class="col-lg-12">    
-                                   
+                  <br><br>
                       <h4><i class="fa fa-angle-right"></i> Table Ruangan </h4>
                           <section id="unseen">
                             <table class="table table-bordered table-striped table-condensed">
@@ -14,6 +14,7 @@
                               </tr>
                               </thead>
                               <tbody>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

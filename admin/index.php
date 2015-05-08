@@ -94,41 +94,39 @@ if(!isset($_SESSION['nip'])){
                   </table>
                     
                   <li class="mt">
-                      <a class="<?php if (basename($_SERVER['PHP_SELF']) == "index.php"){ echo "active "; }  ?>" href="index.php">
+                      <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]"){echo "active";}?>" href="index.php">
                           <span>Home</span>
                       </a>
                   </li>
                   <li class="sub-menu">
-                      <a  href=""> Manajemen Perawat</a>
+                      <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=verifikasi_perawat" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihatdata_perawat" ){echo "active";}?>" href="javascript:;"><span> Manajemen Perawat </span></a>
                          <ul class="sub">
-                            <li><a  href="index.php?pages=verifikasi_perawat">Verifikasi Perawat</a></li>
-                            <li><a  href="index.php?pages=ubahdata_perawat">Ubah Data Perawat </a></li>
-                            <li><a  href="index.php?pages=lihatdata_perawat">Lihat  Perawat </a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=verifikasi_perawat"){echo "active";}?>"><a   href="index.php?pages=verifikasi_perawat">Verifikasi Perawat</a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihatdata_perawat"){echo "active";}?>"><a   href="index.php?pages=lihatdata_perawat">Lihat  Perawat </a></li>
                           </ul>
                     </li>
                   <li class="sub-menu">
-                      <a  href=""> Manajemen Pasien</a>
+                      <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_pasien" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_pasien" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>" href=""> Manajemen Pasien</a>
                          <ul class="sub">
-                            <li><a  href="index.php?pages=input_pasien">Input Pasien</a></li>
-                            <li><a  href="index.php?pages=grafik_pasien">Grafik Pasien </a></li>
-                            <li><a  href="index.php?pages=lihat_pasien">Lihat Pasien </a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_pasien"){echo "active";}?>"><a  href="index.php?pages=input_pasien">Input Pasien</a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>"><a   href="index.php?pages=grafik_pasien">Grafik Pasien </a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_pasien"){echo "active";}?>"><a href="index.php?pages=lihat_pasien">Lihat Pasien </a></li>
                           </ul>
                     </li>
                      <li class="sub-menu">
-                      <a  href=""> Manajemen Ruangan</a>
+                      <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_ruangan" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_ruangan" ){echo "active";}?>" href=""> Manajemen Ruangan </a>
                          <ul class="sub">
-                            <li><a  href="index.php?pages=input_ruangan">Tambah Ruangan</a></li>
-                            <li><a  href="index.php?pages=edit_ruangan">Lihat Ruangan </a></li>
+                            <li class ="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_ruangan"){echo "active";}?>"><a  href="index.php?pages=input_ruangan">Tambah Ruangan</a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_ruangan"){echo "active";}?>"><a href="index.php?pages=lihat_ruangan">Lihat Ruangan </a></li>
                           </ul>
                     </li>
                     <li class="sub-menu">
-                      <a  href=""> Pesan</a>
+                      <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_pesan" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=kirim_pesan" ){echo "active";}?>" href=""> Pesan</a>
                          <ul class="sub">
-                            <li><a  href="index.php?pages=kirim_pesan">Kirim Pesan</a></li>
-                            <li><a  href="index.php?pages=lihat_pesan">Lihat Pesan </a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=kirim_pesan"){echo "active";}?>" ><a  href="index.php?pages=kirim_pesan">Kirim Pesan</a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_pesan"){echo "active";}?>"><a  href="index.php?pages=lihat_pesan">Lihat Pesan </a></li>
                           </ul>
                     </li>
-
               </ul>
               <!-- sidebar menu end-->
           </div>
