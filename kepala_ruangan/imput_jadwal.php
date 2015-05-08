@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section class="main-content">
     <section class="wrapper">
       <h1>Input Jadwal</h1>
@@ -26,6 +27,20 @@
                         <div class="col-sm-10">
                             <input type="text" class="form-control">
                         </div>
+=======
+<section id="main-content" style="height:800px">
+<section class="wrapper">
+  <h1>Input Jadwal</h1>
+  <div class="row mt">
+    <div class="col-lg-8">
+        <div class="form-panel">
+          <form class="form-horizontal style-form" method="get">
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">Tanggal</label>
+                    <div class="input-group date form_date col-sm-8" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style ="margin-left=50px;">
+                        <input class="form-control" size="10" type="text" name="dari">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+>>>>>>> origin/master
                     </div>
               </form>
               <button type="button" class="btn btn-theme05 " style = "width :150px">Send</button>
@@ -34,4 +49,5 @@
       </div>
     </div>
     </section>
+</section>
 </section>

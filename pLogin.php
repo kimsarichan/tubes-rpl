@@ -12,8 +12,8 @@ if($sum>0){
 	$_SESSION['oto']=$data['otoritas'];
 	if($_SESSION['oto']=="admin"){
 		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/admin");	
-	}else if($_SESSION['oto']=="kepalaPerawat"){
-		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/kepala_perawat");
+	}else if($_SESSION['oto']=="kepalaRuang"){
+		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/kepala_ruangan");
 	}else{
 		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/perawat");
 	}

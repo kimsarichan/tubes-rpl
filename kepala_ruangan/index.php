@@ -1,3 +1,22 @@
+<?php session_start();
+include "../koneksi.php";
+if(!isset($_SESSION['nip'])){
+  echo "Anda belum melakukan login!";
+}else{
+  if($_SESSION['oto']!="kepalaRuang"){
+    echo "anda bukan kepala ruang";
+  }else{
+  $query=mysql_query("select * from perawat where nip='".$_SESSION['nip']."' LIMIT 1");
+  $data=mysql_fetch_array($query);
+  $nama=$data[1];
+  $nip=$data[0];
+  $tglLahir=$data[2];
+  $jk=$data[3];
+  $alamat=$data[4];
+  $email=$data['email'];
+  $jabatan=$data['jabatan'];
+  $noTelepon=$data['noTelepon'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -100,7 +119,17 @@
                       </a>
                     </li>
                     <li class="sub-menu">
+<<<<<<< HEAD
                       <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_jadwal" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal" ){echo "active";}?>"   href="javascript:;"> Penjadwalan</a>
+=======
+                      <a  href=""> Manajemen Perawat</a>
+                         <ul class="sub">
+                            <li><a  href="index.php?pages=lihatdata_perawat">Lihat  Perawat </a></li>
+                          </ul>
+                    </li>
+                    <li class="sub-menu">
+                      <a  href=""> Penjadwalan</a>
+>>>>>>> origin/master
                          <ul class="sub">
                             <li><a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_jadwal"){echo "active";}?>"  href="index.php?pages=input_jadwal">Input Jadwal</a></li>
                             <li><a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal"){echo "active";}?>"  href="index.php?pages=ubah_jadwal">Ubah Jadwal</a></li>
@@ -176,6 +205,12 @@
               break;
               case "kirim_pesan":
               include "kirim_pesan.php";
+              break;
+              case "lihatdata_perawat":
+              include "lihatdata_perawat.php";
+              break;
+              case "input_jadwal_perawat":
+              include "imput_jadwal.php";
               break;
             }
       ?>
@@ -287,3 +322,6 @@
 
   </body>
 </html>
+<?php }
+}
+?>

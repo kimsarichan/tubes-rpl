@@ -25,13 +25,7 @@
                               </tr>
                               </thead>
                               <tbody>
-                              <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td ></td>
-                                  <td ></td>
-                                  <td><a href="">Konfirmasi</a></td>
-                              </tr>
+                              <?php include "p_lihat_pasien.php"; ?> 
                               <tr>
                                   <td></td>
                                   <td></td>
