@@ -123,7 +123,11 @@
                     </li>
                     <li class="sub-menu">
                       <a  href="index.php?pages=pesan">
-                          <span>Pesan </span>
+                          Pesan 
+                          <ul class="sub">
+                            <li><a  href="index.php?pages=lihat_pesan">lihat pesan</a></li>
+                            <li><a  href="index.php?pages=kirim_pesan">Kirim pesan</a></li>
+                          </ul>
                       </a>
                     </li>
 
@@ -168,6 +172,12 @@
               break;
               case "input_pasien":
               include "input_pasien.php";
+              break;
+              case "lihat_pesan":
+              include "lihat_pesan.php";
+              break;
+              case "kirim_pesan":
+              include "kirim_pesan.php";
               break;
             }
       ?>

@@ -135,6 +135,15 @@ if(!isset($_SESSION['nip'])){
                           <span>Pesan </span>
                       </a>
                     </li>
+                    <li class="sub-menu">
+                    <a  href="index.php?pages=pesan">
+                          Pesan 
+                          <ul class="sub">
+                            <li><a  href="index.php?pages=lihat_pesan">lihat pesan</a></li>
+                            <li><a  href="index.php?pages=kirim_pesan">kirim pesan </a></li>
+                          </ul>
+                      </a>
+                    </li>
 
               </ul>
               <!-- sidebar menu end-->
@@ -163,7 +172,7 @@ if(!isset($_SESSION['nip'])){
               case "lihat_pasien":
               include "lihat_pasien.php";
               break;
-              case "pesan":
+              case "kirim_pesan":
               include "pesan.php";
               break;
               case "input_sertifikasi":
