@@ -9,9 +9,9 @@ if($data[0]>0){
 	$delete=mysql_query("delete from perawat where nip='$nip'");
 
 	if($delete){
-		header("Location: $url[0]?pages=lihatdata_perawat");
+		header("Location: $url[0]?pages=lihatdata_perawat&&status=success");
 	}else{
-		echo "failed";
+		header("Location: $url[0]?pages=lihatdata_perawat&&status=failed");
 	}
 }else{
 	header("Location: $url[0]?pages=lihatdata_perawat&&status=nodata");

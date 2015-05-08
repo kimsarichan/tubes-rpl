@@ -1,4 +1,4 @@
-
+<section id="main-content" style="height:800px">
 <section class="wrapper">
   <h1>Input Jadwal</h1>
   <div class="row mt">
@@ -39,4 +39,5 @@
 
 
     </section>
+</section>
 </section>
