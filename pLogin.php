@@ -3,7 +3,7 @@ session_start();
 include "koneksi.php";
 $nip=$_POST['nip'];
 $password=$_POST['password'];
-$query=mysql_query("select * from perawat where nip='$nip' and password='$password' LIMIT 1");
+$query=mysql_query("select * from perawat where nip='$nip' and password='$password' and status=true LIMIT 1");
 $data=mysql_fetch_array($query);
 $sum=mysql_num_rows($query);
 $ex=explode("/", $_SERVER['PHP_SELF']);

@@ -31,18 +31,79 @@
                                 }else{
                                     $nama="";
                                 }
-                                $select=mysql_query("select*from perawat where status=false and nama like '%$nama%'");
+                                $select=mysql_query("select*from perawat where status=false and nama like '%$nama%' and otoritas !='admin' and otoritas !='kepalaruang'");
                                 $no=1;
                                 while($data=mysql_fetch_array($select)){
                                  echo  "<tr>
                                   <td>$no</td>
                                   <td>$data[nama]</td>
                                   <td >$data[NIP]</td>
-                                  <td><a href='#openModal' >Verifikasi</a></td>
+                                  <td><a href='#openModal$data[NIP]' >Verifikasi</a>|<a href='proses/p_delete_perawat.php?nip=$data[NIP]'>Delete</a></td>
                               </tr>";   
                               $no++; 
-                              }
+
+                              
                               ?>
+                              <div id="openModal<?php echo $data['NIP'] ?>" class="modalDialog" tabindex="-1" role="dialog" aria-hidden="true">
+                              <div>
+                                <a href="#close" title="Close" class="close">X</a>
+                                <h2>Verifikasi </h2>
+                                 <div class="row mt">
+                                          <div class="col-lg-8">
+                              <form class="form-horizontal style-form" method="post" action="proses/p_verifikasi_data.php">
+                              <input type="hidden" name="tmpnip" value="<?php echo $data['NIP'] ?>">
+                              <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Nama</label>
+                              <div class="col-sm-10">
+                                  <input type="nama" placeholder="perawat n"class="form-control" disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">NIP</label>
+                              <div class="col-sm-10">
+                                  <input type="text" name="nip" value="<?php echo $data['NIP'] ?>" class="form-control" >
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
+                              <div class="col-sm-10">
+                                  <input type="text" name="jk" value="<?php echo $data['jenisKelamin'] ?>" class="form-control"disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Email</label>
+                              <div class="col-sm-10">
+                                  <input type="text" name="email" value="<?php echo $data['email'] ?>" class="form-control">
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
+                              <div class="col-sm-10">
+                                  <input type="text" name="tanggalLahir" value="<?php echo $data['tanggalLahir'] ?>" class="form-control"disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Jabatan</label>
+                              <div class="col-sm-10">
+                                  <input type="text" name="jabatan" value="<?php echo $data['jabatan'] ?>" class="form-control">
+                              </div>
+                               <br><br><br>
+                                <label class="col-sm-2 col-sm-2 control-label">Tanggal Masuk</label>
+                              <div class="col-sm-10">
+                                  <input type="text" disabled class="form-control">
+                              </div>
+                               <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Masa Kerja</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="" name="masaJabatan" class="form-control">
+                              </div>
+                               <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Ruangan</label>
+                              <div class="col-sm-10">
+                                  <input type="text"placeholder="" disabaled class="form-control">
+                              </div>
+
+                          </div>
+                           <button type="submit" class="btn btn-theme05 " style = "width :150px">Verifikasi</button>
+                    </form>
+        </div>
+  </div>
+</div><?php } ?>
                               </tbody>
                           </table>
                           <div class="col-lg-4"></div>  
@@ -53,65 +114,7 @@
         </div><!-- /row -->
    
 
-<div id="openModal" class="modalDialog" tabindex="-1" role="dialog" aria-hidden="true">
-  <div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Verifikasi </h2>
-     <div class="row mt">
-              <div class="col-lg-8">
-                    <form class="form-horizontal style-form" method="get">
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Nama</label>
-                              <div class="col-sm-10">
-                                  <input type="nama" placeholder="perawat n"class="form-control" disabled>
-                              </div>
-                              <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">NIP</label>
-                              <div class="col-sm-10">
-                                  <input type="text" placeholder="113234532"class="form-control" >
-                              </div>
-                              <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
-                              <div class="col-sm-10">
-                                  <input type="text" placeholder="Perempuan"class="form-control"disabled>
-                              </div>
-                              <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Email</label>
-                              <div class="col-sm-10">
-                                  <input type="text"placeholder="n@gmail.com" class="form-control"disabled>
-                              </div>
-                              <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
-                              <div class="col-sm-10">
-                                  <input type="text"placeholder="11/11/1996" class="form-control"disabled>
-                              </div>
-                              <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Jabatan</label>
-                              <div class="col-sm-10">
-                                  <input type="text"placeholder="perawat UGD" class="form-control"disabled>
-                              </div>
-                               <br><br><br>
-                                <label class="col-sm-2 col-sm-2 control-label">Tanggal Masuk</label>
-                              <div class="col-sm-10">
-                                  <input type="text"placeholder="8/5/2015" class="form-control">
-                              </div>
-                               <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Masa Kerja</label>
-                              <div class="col-sm-10">
-                                  <input type="text"placeholder="" class="form-control">
-                              </div>
-                               <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Ruangan</label>
-                              <div class="col-sm-10">
-                                  <input type="text"placeholder="" class="form-control">
-                              </div>
 
-                          </div>
-                           <button type="button" class="btn btn-theme05 " style = "width :150px">Verifikasi</button>
-                    </form>
-        </div>
-  </div>
-</div>
 <style type="text/css">
     .modalDialog {
   position: fixed;

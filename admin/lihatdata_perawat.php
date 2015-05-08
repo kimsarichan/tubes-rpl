@@ -31,7 +31,7 @@
                                 }else{
                                     $nama="";
                                 }
-                                $select=mysql_query("select*from perawat where status=false and nama like '%$nama%'");
+                                $select=mysql_query("select*from perawat where status=true and nama like '%$nama%' ");
                                 $no=1;
                                 while($data=mysql_fetch_array($select)){
                                  echo  "<tr>

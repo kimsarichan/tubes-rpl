@@ -57,7 +57,7 @@
 		          
 		            <div class="registration">
 		                Don't have an account yet?<br/>
-		                <a class="" href="#">
+		                <a class="" href="registrasi.php">
 		                    Create an account
 		                </a>
 		            </div>
