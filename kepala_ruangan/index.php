@@ -55,9 +55,18 @@ if(!isset($_SESSION['nip'])){
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/js/codebase/dhtmlxcombo.css"/>
+    <script src="assets/js/codebase/dhtmlxcombo.js"></script>
+    <script>
+        var myCombo, myCombo2;
+        function doOnLoad() {
+            myCombo2 = dhtmlXComboFromSelect("combo");
+            myCombo2.enableFilteringMode(true);
+        }
+    </script>
   </head>
 
-  <body>
+  <body onload="doOnLoad();">
 
   <section id="container" >
       <!-- **********************************************************************************************************************************************************
@@ -102,13 +111,13 @@ if(!isset($_SESSION['nip'])){
                   </table>
                     
                   <li class="mt">
-                      <a class="<?php if (basename($_SERVER['PHP_SELF']) == "index.php"){ echo "active "; }  ?>" href="index.php">
+                      <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]"){ echo "active "; }  ?>" href="index.php">
                           <span>Home</span>
                       </a>
                   </li>
                  
                    <li class="sub-menu">
-                      <a class="<?php if (basename($_SERVER['PHP_SELF'])== "index.php?pages=edit_data"){echo "active";}?>" href="index.php?pages=edit_data" >
+                      <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=edit_data"){echo "active";}?>" href="index.php?pages=edit_data" >
                           <span>Edit Data</span>
                       </a>
                     </li>
@@ -209,6 +218,9 @@ if(!isset($_SESSION['nip'])){
               break;
               case "input_jadwal_perawat":
               include "imput_jadwal.php";
+              break;
+              case "input_perawat_jadwal":
+              include "input_perawat_jadwal.php";
               break;
             }
       ?>

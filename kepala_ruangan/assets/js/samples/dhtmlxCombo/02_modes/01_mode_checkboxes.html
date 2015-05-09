@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkboxes mode</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" type="text/css" href="../../../codebase/dhtmlxcombo.css"/>
+	<script src="../../../codebase/dhtmlxcombo.js"></script>
+	<script>
+		var myCombo, myCombo2;
+		function doOnLoad() {
+			myCombo = new dhtmlXCombo("combo_zone", "combo", 230, "checkbox");
+			myCombo.load("../common/data2.json");
+			myCombo.enableFilteringMode(true);
+			//
+			myCombo2 = dhtmlXComboFromSelect("mySelect","test[]");
+			myCombo2.enableFilteringMode(true);
+		}
+	</script>
+
+</head>
+<body onload="doOnLoad();">
+	<h3>Checkboxes mode</h3>
+	<div id="combo_zone"></div>
+	<br><br>
+	<h3>Init from select</h3>
+	<form method="post" action="pcoba.php">
+	<select id="mySelect" style="width:230px;">
+		<option value="the_adventures_of_tom_sawyer" name="test">The Adventures of Tom Sawyer</option>
+		<option value="the_dead_zone" name="test">The Dead Zone</option>
+		<option value="the_first_men_in_the_moon" name="test">The First Men in the Moon</option>
+		<option value="the_girl_who_loved_tom_gordon" name="test">The Girl Who Loved Tom Gordon</option>
+		<option value="the_green_mile" name="test">The Green Mile</option>
+		<option value="the_invisible_man" selected="1" name="test">The Invisible Man</option>
+		<option value="the_island_of_doctor_moreau" checked="1" name="test">The Island of Doctor Moreau</option>
+		<option value="the_prince_and_the_pauper" checked="1" name="test">The Prince and the Pauper</option>
+		<option value="the_running_man" name="test">The Running Man</option>
+		<option value="the_talisman" name="test">The Talisman</option>
+		<option value="the_time_machine" name="test">The Time Machine</option>
+		<option value="the_tommyknockers" name="test">The Tommyknockers</option>
+		<option value="the_war_of_the_worlds" name="test">The War of the Worlds</option>
+	</select>
+	<input type="submit" value="kirim"> 
+</form>
+
+</body>
+</html>

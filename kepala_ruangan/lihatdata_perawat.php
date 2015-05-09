@@ -4,7 +4,7 @@
             <br><br><br>
                       <form class="form-inline" role="form" method="get"  action="<?php echo $_SERVER['PHP_SELF']?>">
                            <div class="form-group">
-                              <input type="hidden" name="pages" value="verifikasi_perawat">
+                              <input type="hidden" name="pages" value="lihatdata_perawat">
                               <input type="text" name="nama" class="form-control" id="exampleInputEmail2" placeholder="Masukan nama perawat">
                           </div>
                           <button type="cari" class="btn btn-theme">cari</button>
