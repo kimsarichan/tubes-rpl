@@ -29,11 +29,11 @@
                               </div>
                               <br><br><br>
                             <div class="col-sm-10">
-                              <input type="file" class="form-control"  placeholder="" name="sertifikasi">
+                              <input type="file" class="form-control"  placeholder="choose file" name="sertifikasi">
                             </div>
                             <br><br><br>
                             <div class="col-sm-10">
-                            <input type="submit" class="upload btn btn-theme">
+                                <input type="submit" placeholder="kirim" class="upload btn btn-theme">
                           </div>
                           </div>
                         </form>

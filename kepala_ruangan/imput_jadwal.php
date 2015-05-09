@@ -48,15 +48,8 @@
                 </div>
                 <button type="submit" class="btn btn-theme05 " style = "width :150px">Lanjutkan</button>
           </form>
-          
         </div>
-
+      </div>
     </div>
-  </div>
-
-</div>
-
-
-
     </section>
 </section>

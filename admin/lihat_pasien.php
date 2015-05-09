@@ -4,7 +4,6 @@
             <br><br><br>
                       <form class="form-inline" role="form" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                            <div class="form-group">
-                              <label class="sr-only" for="exampleInputEmail2">Email address</label>
                               <input type="hidden" name="pages" value="lihat_pasien">
                               <input type="text" name="nama" class="form-control" id="exampleInputEmail2" placeholder="Masukan nama pasien">
                           </div>
