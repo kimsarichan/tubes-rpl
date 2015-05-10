@@ -82,11 +82,6 @@
                           <input type="text" name="jabatan" value="<?php echo $data['jabatan'] ?>" class="form-control">
                       </div>
                        <br><br><br>
-                        <label class="col-sm-2 col-sm-2 control-label">Tanggal Masuk</label>
-                      <div class="col-sm-10">
-                          <input type="text" disabled class="form-control">
-                      </div>
-                       <br><br><br>
                       <label class="col-sm-2 col-sm-2 control-label">Masa Kerja</label>
                       <div class="col-sm-10">
                           <input type="text"placeholder="" name="masaJabatan" class="form-control">
@@ -96,8 +91,8 @@
                       <div class="col-sm-10">
                           <input type="text"placeholder="" disabaled class="form-control">
                       </div>
-
                   </div>
+                  <br>
                    <button type="submit" class="btn btn-theme05 " style = "width :150px">Verifikasi</button>
             </form>
         </div>

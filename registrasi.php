@@ -93,10 +93,6 @@
 	                              <div class="col-sm-10">
 	                                  <input type="text" name="noTelepon" class="form-control">
 	                              </div>
-	                              <div class="col-sm-12">
-	                              	<br>
-		                              <input type="file" class="form-control"  placeholder="" name="upload_foto">
-		                            </div>
 	                          </div>
 	                          <button type="submit" class="btn btn-theme03 " style = "width :150px">Apply</button>
 	                    </form>
