@@ -126,11 +126,11 @@ if(!isset($_SESSION['nip'])){
                       </a>
                     </li>
                     <li class="sub-menu">
-                      <a  href=""> Penjadwalan</a>
+                      <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_jadwal" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihatdata_perawat" ) {echo "active";}?>" href="javascript:;"> Penjadwalan</a>
                          <ul class="sub">
                             <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_jadwal"){echo "active";}?>"><a    href="index.php?pages=input_jadwal">Input Jadwal</a></li>
                             <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal"){echo "active";}?>"><a    href="index.php?pages=ubah_jadwal">Ubah Jadwal</a></li>
-                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal"){echo "active";}?>"><a  href="index.php?pages=lihatdata_perawat">Lihat  Perawat </a></li>          
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihatdata_perawat"){echo "active";}?>"><a  href="index.php?pages=lihatdata_perawat">Lihat  Perawat </a></li>          
                           </ul> 
                     </li>
                     <li class="sub-menu">
