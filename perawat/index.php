@@ -160,9 +160,6 @@ if(!isset($_SESSION['nip'])){
               case "lihat_jadwal":
               include "lihat_jadwal.php";
               break;
-              case "grafik_pasien":
-              include "grafik_pasien.php";
-              break;
               case "lihat_pasien":
               include "lihat_pasien.php";
               break;
@@ -174,6 +171,9 @@ if(!isset($_SESSION['nip'])){
               break;
               case "lihat_sertifikasi":
               include "lihat_sertifikasi.php";
+              break;
+              case "grafik_pasien":
+              include "graph/grafik.php";
               break;
             }
       ?>
