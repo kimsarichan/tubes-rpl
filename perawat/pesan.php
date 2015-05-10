@@ -21,7 +21,7 @@
 						  <input type="checkbox" id="inlineCheckbox2" name="kepalaRuang" value="<?php echo $datakepala[0] ?>"> Kepala Ruangan
 						</label>
 						<br><br>
-                          <input type="text" class="form-control " name="pesan" style= "height : 200px">
+                          <textarea type="text" class="form-control " name="pesan" rows="5"></textarea>
                           <br>
                           <button type="submit" class="btn btn-theme05 " style = "width :150px">Send</button>
             </form>
