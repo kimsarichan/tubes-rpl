@@ -215,13 +215,9 @@ if(!isset($_SESSION['nip'])){
               case "input_perawat_jadwal":
               include "input_perawat_jadwal.php";
               break;
-<<<<<<< HEAD
-              c
-=======
               case "ubah_jadwal":
               include "ubah_jadwal.php";
               break;
->>>>>>> cb9ece56cc649f31da69d9d8ccd09a671caa569c
             }
       ?>
       
