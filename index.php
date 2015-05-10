@@ -28,16 +28,16 @@
   <body>
      <!-- Navigation -->
     <nav class="header black-bg" role="navigation">
-        <ul class="nav navbar-nav">
+       <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Home</a>
+                        <a class ="logo" href="#"><b>Home</b></a>
                     </li>
                     <li>
-                        <a href="login.php">Login</a>
+                        <a class ="logo"  href="login.php"><b>Login</b></a>
                     </li>
                 </ul>
     </nav>
-    
+    <br><br><br><br>
 
     <!-- Page Content -->
     <div class="container">
@@ -101,7 +101,7 @@
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    <h4>Blog Search</h4>
+                    <h4>Cari Artikel</h4>
                     <div class="input-group">
                         <input type="text" class="form-control">
                         <span class="input-group-btn">

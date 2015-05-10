@@ -120,6 +120,13 @@ if(!isset($_SESSION['nip'])){
                             <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_ruangan"){echo "active";}?>"><a href="index.php?pages=lihat_ruangan">Lihat Ruangan </a></li>
                           </ul>
                     </li>
+                     <li class="sub-menu">
+                      <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_artikel" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_artikel" ){echo "active";}?>" href=""> Artikel</a>
+                         <ul class="sub">
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_artikel"){echo "active";}?>" ><a  href="index.php?pages=input_artikel">Input Artikel </a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_artikel"){echo "active";}?>"><a  href="index.php?pages=lihat_artikel">Lihat Artikel</a></li>
+                          </ul>
+                    </li>
                     <li class="sub-menu">
                       <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_pesan" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=kirim_pesan" ){echo "active";}?>" href=""> Pesan</a>
                          <ul class="sub">
@@ -180,6 +187,12 @@ if(!isset($_SESSION['nip'])){
               break;
               case "lihat_sertifikasi":
               include "lihat_sertifikasi.php";
+              break;
+              case "lihat_artikel":
+              include "lihat_artikel.php";
+              break;
+              case "input_artikel":
+              include "input_artikel.php";
               break;
 
            }
