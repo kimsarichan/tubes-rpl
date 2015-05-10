@@ -16,13 +16,13 @@
                               <?php
                                 include "../koneksi.php";
                                 $no=1;
-                                $select=mysql_query("select*from sertifikasi where NIP='$_SESSION[nip]'");
+                                $select=mysql_query("select*from sertifikasi where NIP='$_GET[nip]'");
                                 while($data=mysql_fetch_array($select)){
                                   echo "<tr>
                                   <td >$no</td>
                                   <td>$data[2]</td>
                                   <td>$data[1]</td>
-                                  <td><a href='sertifikasi/$data[1]$_SESSION[nip].pdf'>Download sertifikasi</a></td>
+                                  <td><a href='../perawat/sertifikasi/$data[1]$_GET[nip].pdf'>Download sertifikasi</a></td>
                                 </tr>";
                                 $no++;
                                 }
@@ -35,8 +35,8 @@
                </div>
             </div>
 
-        </div><!-- /row -->
+        </div>
       
 
-    </section><! --/wrapper -->
-</section><!-- /MAIN CONTENT -->
+    </section>
+</section>

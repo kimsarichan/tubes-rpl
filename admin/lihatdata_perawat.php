@@ -34,16 +34,20 @@
                                 $select=mysql_query("select*from perawat where status=true and nama like '%$nama%' and otoritas<>'admin' ");
                                 $no=1;
                                 while($data=mysql_fetch_array($select)){
+                                  if($data['otoritas']=="kepalaRuang"){
+                                    $link="";
+                                  }else{
+                                    $link="<a href='$_SERVER[PHP_SELF]?pages=jadikan_kepalaruangan&nip=$data[NIP]'>Jadikan Kepala RUangan</a>";
+                                  }
                                  echo  "<tr>
                                   <td>$no</td>
                                   <td>$data[nama]</td>
                                   <td >$data[NIP]</td>
-                                  <td><a href='#openModal'>Detail</a>|<a href='$_SERVER[PHP_SELF]?pages=edit_perawat&&nip=$data[NIP]'>Edit</a>|<a href='proses/p_delete_perawat.php?nip=$data[NIP]'>Delete</a>|<a href='$_SERVER[PHP_SELF]?pages=lihat_sertifikasi'>Lihat sertifikasi</a></td>
+                                  <td><a href='#openModal$data[NIP]'>Detail</a>|<a href='$_SERVER[PHP_SELF]?pages=edit_perawat&&nip=$data[NIP]'>Edit</a>|<a href='proses/p_delete_perawat.php?nip=$data[NIP]'>Delete</a>|<a href='$_SERVER[PHP_SELF]?pages=lihat_sertifikasi&nip=$data[NIP]'>Lihat sertifikasi</a> | $link</td>
                               </tr>";   
                               $no++; 
-                              }
                               ?>
-                              <div id="openModal" class="modalDialog" tabindex="-1" role="dialog" aria-hidden="true">
+                              <div id="openModal<?php echo $data['NIP'] ?>" class="modalDialog" tabindex="-1" role="dialog" aria-hidden="true">
                       <div>
                         <h2>LIHAT PROFILE </h2>
                         <a href="#close" title="Close" class="close">X</a>
@@ -97,8 +101,11 @@
                           </table>
 
             </div>
-
-        </div><!-- /row -->
+          </div>
+        </div>
+      </div>
+    </div><!-- /row -->
+  <?php } ?>
 <style type="text/css">
     .modalDialog {
   position: fixed;
