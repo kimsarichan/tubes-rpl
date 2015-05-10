@@ -89,7 +89,15 @@
                        <br><br><br>
                       <label class="col-sm-2 col-sm-2 control-label">Ruangan</label>
                       <div class="col-sm-10">
-                          <input type="text"placeholder="" disabaled class="form-control">
+                          <select name="ruang">
+                            <?php
+                              include "../koneksi.php";
+                              $select=mysql_query("select * from ruang");
+                              while($data=mysql_fetch_array($select)){
+                                echo "<option value='$data[0]'>$data[1]</oSption>";
+                              }
+                            ?>
+                          </select>
                       </div>
                   </div>
                   <br>

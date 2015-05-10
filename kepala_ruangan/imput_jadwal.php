@@ -37,7 +37,7 @@
                         <select class="form-control" name="ruang">
                                 <?php
                                     include "../koneksi.php";
-                                    $select=mysql_query("select * from ruang ");
+                                    $select=mysql_query("select * from ruang where kepalaRuang='$_SESSION[nip]'");
                                     while($data=mysql_fetch_array($select)){
                                         echo "<option value='$data[0]'>$data[1]</option>";
                                     }

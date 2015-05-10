@@ -188,6 +188,8 @@ if(!isset($_SESSION['nip'])){
               case "lihat_sertifikasi":
               include "lihat_sertifikasi.php";
               break;
+              case "jadikan_kepalaruangan":
+              include "jadikan_kepalaruangan.php";
               case "lihat_artikel":
               include "lihat_artikel.php";
               break;

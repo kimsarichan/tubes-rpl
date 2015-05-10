@@ -29,13 +29,13 @@
 		  		if($insert){
 		  			header ("Location: $base_url[0]?pages=input_sertifikasi&&status=success");
 		  		}else{
-		  			header ("Location: $base_url[0]?pages=input_sertifikasi&&status=failed");
+		  			header ("Location: $base_url[0]?pages=input_sertifikasi&&status=dbfailed");
 		  			if(file_exists($rename)){
 		  				unlink($rename);
 		  			}
 		  		}
 	    } else {
-	        header ("Location: $base_url[0]?pages=input_sertifikasi&&status=failed");
+	        header ("Location: $base_url[0]?pages=input_sertifikasi&&status=filefailed");
 	    }
 	}else{
 		header ("Location: $base_url[0]?pages=input_sertifikasi&&status=wrongfile");
