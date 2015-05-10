@@ -10,6 +10,14 @@
                             echo "Data berhasil diubah";
                           }else if ($_GET['status']=="failed"){
                             echo "data gagal diubah";
+                          }else if ($_GET['status']=="namafailed"){
+                            echo "Nama Harus diisi";
+                          }else if ($_GET['status']=="idfailed"){
+                            echo "id sertifikasi harus diisi";
+                          }else if ($_GET['status']=="filefailed"){
+                            echo "file harus diisi";
+                          }else if ($_GET['status']=="wrongfile"){
+                            echo "FIle harus berformat pdf";
                           }
                         }else{
                           echo "";

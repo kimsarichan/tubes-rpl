@@ -10,9 +10,9 @@ $noTelepon=$_POST['noTelepon'];
 $query=mysql_query("update perawat set nama='".$nama."', jenisKelamin='".$jk."',email='".$email."', tanggalLahir='".$tglLahir."',noTelepon='".$noTelepon."' where nip='".$nip."'");
 
 if($query){
-	header ("Location: $_SERVER[HTTP_REFERER]");
+	header ("Location: $_SERVER[HTTP_REFERER]&status=success");
 }else{
-	echo "gagal";
+	header ("Location: $_SERVER[HTTP_REFERER]&status=failed");
 }
 
 ?>
