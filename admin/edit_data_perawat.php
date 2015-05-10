@@ -12,10 +12,7 @@ $query=mysql_query("select * from perawat where nip='".$_GET['nip']."' LIMIT 1")
   $otoritas=$data['otoritas'];
   $alamat=$data['alamat'];
   $masajabatan=$data['masaJabatan'];
-?>
-            <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
+??>
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
