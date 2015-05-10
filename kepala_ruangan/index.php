@@ -48,8 +48,6 @@ if(!isset($_SESSION['nip'])){
     <link rel="stylesheet" href="assets/css/calender.css" />
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script type="text/javascript" src="js/calendar.js"></script>
-      <link href="assets/css/tabacc/tabacc.css" rel="stylesheet" />
-      <link href="assets/css/tabacc/themes/minimal.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
