@@ -154,6 +154,9 @@ if(!isset($_SESSION['nip'])){
               case "kirim_pesan":
               include "kirim_pesan.php";
               break;
+              case "input_pasien":
+              include "input_pasien.php";
+              break;
               case "ubahdata_perawat_setelahdicari":
               include "ubahdata_perawat_setelahdicari";
               break;
@@ -171,6 +174,12 @@ if(!isset($_SESSION['nip'])){
               break;
               case "edit_perawat":
               include "edit_data_perawat.php";
+              break;
+              case "lihat_profile":
+              include "edit_data_perawat.php";
+              break;
+              case "lihat_sertifikasi":
+              include "lihat_sertifikasi.php";
               break;
 
            }

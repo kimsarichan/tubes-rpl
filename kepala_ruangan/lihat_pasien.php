@@ -26,20 +26,6 @@
                               </thead>
                               <tbody>
                               <?php include "p_lihat_pasien.php"; ?> 
-                              <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td ></td>
-                                  <td ></td>
-                                  <td></td>
-                              </tr>
-                              <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td ></td>
-                                  <td ></td>
-                                  <td></td>
-                              </tr>
                               </tbody>
                           </table>
                           <div class="col-lg-4"></div>  

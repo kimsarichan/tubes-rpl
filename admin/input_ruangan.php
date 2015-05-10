@@ -1,6 +1,6 @@
       <section id="main-content">
           <section class="wrapper">
-            <h1>Input Pasien</h1>
+            <h1>Input Ruangan</h1>
             <div class="row mt">
               <div class="col-lg-8">
                   <div class="form-panel">

@@ -14,7 +14,7 @@
                           </div>
                       </form>
                       <br>
-                          <input type="text" class="form-control " style= "height : 200px">
+                          <textarea type="text" class="form-control " rows="5"></textarea>
                           <br>
                           <button type="button" class="btn btn-theme05 " style = "width :150px">Send</button>
           			</div><!-- /form-panel -->
