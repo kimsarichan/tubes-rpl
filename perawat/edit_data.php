@@ -5,6 +5,16 @@
             <div class="row mt">
               <div class="col-lg-8">
                   <div class="form-panel">
+                    <?php
+                      if(isset($_GET['status'])){
+                        if($_GET['status']=="success"){
+                          echo "Data berhasil diubah";
+                        }elseif ($_GET['status']=="failed") {
+                          echo "Data gagal diubah";
+                        }
+                      }
+
+                    ?>
                     <form class="form-horizontal style-form" method="post" action="proses/updatePerawat.php">
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Nama</label>

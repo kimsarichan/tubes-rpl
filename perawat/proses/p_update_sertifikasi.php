@@ -12,6 +12,15 @@
 	$target=$dir.$rename.".pdf";
 	$base_url=explode("?", $_SERVER['HTTP_REFERER']);
 	echo $type;
+	if($nama==""){
+		header ("Location: $base_url[0]?pages=input_sertifikasi&&status=namafailed");
+	}
+	if($idsertifikasi==""){
+		header ("Location: $base_url[0]?pages=input_sertifikasi&&status=idfailed");
+	}
+	if(empty($_FILES['sertifikasi'])){
+		header ("Location: $base_url[0]?pages=input_sertifikasi&&status=filefailed");
+	}
 	if($type=="application/pdf"){
 	  	if (move_uploaded_file($tmp, $target)) {
 	  		$select=mysql_query("select COUNT(*) as jum from sertifikasi where NIP='$_SESSION[nip]'");
@@ -26,9 +35,9 @@
 		  			}
 		  		}
 	    } else {
-	        echo "Sorry, there was an error uploading your file.";
+	        header ("Location: $base_url[0]?pages=input_sertifikasi&&status=failed");
 	    }
 	}else{
-		echo "your file is not pdf, please insert pdf files";
+		header ("Location: $base_url[0]?pages=input_sertifikasi&&status=wrongfile");
 	}
 ?>

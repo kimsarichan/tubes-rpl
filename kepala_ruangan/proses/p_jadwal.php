@@ -3,7 +3,6 @@ include "../../koneksi.php";
 	$insert=mysql_query("insert into jadwal (tanggalJam,NIP) values ('$_POST[tanggal]','$_POST[perawat]')");
 	$select=mysql_query("select idJadwal from jadwal order by idJadwal desc LIMIT 1");
 	$data=mysql_fetch_array($select);
-	
 	echo $root[1];
 	if($insert){
 		echo $data[0];
@@ -16,5 +15,4 @@ include "../../koneksi.php";
 		}
 	}else{
 		header ("Location: $_SERVER[HTTP_REFERER]&status=failed");
-	}
 ?>
