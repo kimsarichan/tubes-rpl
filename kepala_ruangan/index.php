@@ -48,8 +48,6 @@ if(!isset($_SESSION['nip'])){
     <link rel="stylesheet" href="assets/css/calender.css" />
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script type="text/javascript" src="js/calendar.js"></script>
-      <link href="assets/css/tabacc/tabacc.css" rel="stylesheet" />
-      <link href="assets/css/tabacc/themes/minimal.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -128,11 +126,11 @@ if(!isset($_SESSION['nip'])){
                       </a>
                     </li>
                     <li class="sub-menu">
-                      <a  href=""> Penjadwalan</a>
+                      <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_jadwal" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihatdata_perawat" ) {echo "active";}?>" href="javascript:;"> Penjadwalan</a>
                          <ul class="sub">
                             <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_jadwal"){echo "active";}?>"><a    href="index.php?pages=input_jadwal">Input Jadwal</a></li>
                             <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal"){echo "active";}?>"><a    href="index.php?pages=ubah_jadwal">Ubah Jadwal</a></li>
-                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=ubah_jadwal"){echo "active";}?>"><a  href="index.php?pages=lihatdata_perawat">Lihat  Perawat </a></li>          
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihatdata_perawat"){echo "active";}?>"><a  href="index.php?pages=lihatdata_perawat">Lihat  Perawat </a></li>          
                           </ul> 
                     </li>
                     <li class="sub-menu">
