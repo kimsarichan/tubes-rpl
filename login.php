@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - Bootstrap Admin Template</title>
+    <title>SIDRA</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -27,6 +27,7 @@
 
   <body>
 
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -41,7 +42,7 @@
 	  		<br><br><br><br>
 	  		
 		      <form class="form-login" method="POST" action="pLogin.php">
-		        <h2 class="form-login-heading">Log in</h2>
+		        <h2 class="form-login-heading">Log in SIDRA</h2>
 		        <div class="login-wrap">
 		            <input type="text" class="form-control" placeholder="NIP" autofocus name="nip">
 		            <br>
@@ -56,7 +57,7 @@
 		            <hr>
 		          
 		            <div class="registration">
-		                Don't have an account yet?<br/>
+		                Belum punya akun perawat ?<br/>
 		                <a class="" href="registrasi.php">
 		                    Create an account
 		                </a>

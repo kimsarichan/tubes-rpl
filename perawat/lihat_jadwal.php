@@ -2,9 +2,9 @@
           <section class="wrapper">
             <h3><i class="fa fa-angle-right"></i> Jadwal Perawat</h3>
           <div class="row mt">
+            <br>
             <div class="col-lg-12">
                       <div class="content-panel">
-                      <h4><i class="fa fa-angle-right"></i> Jadwal April-01</h4>
                           <section id="unseen">
                             <table class="table table-bordered table-striped table-condensed">
                               <thead>
