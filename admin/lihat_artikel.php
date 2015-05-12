@@ -13,9 +13,20 @@
                               </tr>
                               </thead>
                               <tbody>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
+                              <?php
+                                include "../koneksi.php";
+                                $url=explode("?",$_SERVER['PHP_SELF']);
+                                $select=mysql_query("select*from artikel");
+                                $no=1;
+                                while($data=mysql_fetch_array($select)){
+                                  echo "<tr>
+                                      <td>$no</td>
+                                      <td>$data[Judul]</td>
+                                      <td><a href='$url[0]?pages=detail_artikel&id=$data[0]'>Lihat</a></td>
+                                  </tr>";
+                                  $no++;
+                              }
+                              ?>
                               </tbody>
                           </table>
                           </section>
