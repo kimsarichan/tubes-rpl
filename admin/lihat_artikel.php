@@ -13,7 +13,24 @@
                               </tr>
                               </thead>
                               <tbody>
+<<<<<<< HEAD
                                   <?php include "proses/p_lihatartikel.php"; ?> 
+=======
+                              <?php
+                                include "../koneksi.php";
+                                $url=explode("?",$_SERVER['PHP_SELF']);
+                                $select=mysql_query("select*from artikel");
+                                $no=1;
+                                while($data=mysql_fetch_array($select)){
+                                  echo "<tr>
+                                      <td>$no</td>
+                                      <td>$data[Judul]</td>
+                                      <td><a href='$url[0]?pages=detail_artikel&id=$data[0]'>Lihat</a></td>
+                                  </tr>";
+                                  $no++;
+                              }
+                              ?>
+>>>>>>> origin/master
                               </tbody>
                           </table>
                           </section>

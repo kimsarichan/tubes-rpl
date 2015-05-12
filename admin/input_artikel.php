@@ -6,12 +6,33 @@
       <div class="row ">
         <div class="col-lg-12">
           <div class="form-panel">
+            <?php
+              if(isset($_GET['status'])){
+                if($_GET['status']=='judulfailed'){
+                  echo "Judul harus diisi";
+                }elseif($_GET['status']=='isifailed'){
+                  echo "Isi artikel harus diisi";
+                }elseif($_GET['status']=='failed'){
+                  echo "input artikel gagal";
+                }elseif($_GET['status']=='success'){
+                  echo "input artikel berhasil";
+                }
+              }
+            ?>
                 <h4 class="mb"><i class="fa fa-angle-right"></i> Input Artikel</h4>
+<<<<<<< HEAD
                  <form  method="post"  action="proses/p_input_artikel.php">
+=======
+                 <form role="form" action="proses/p_input_article.php" method="post">
+>>>>>>> origin/master
                      <div class="form-group">
                         <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Masukan  Judul" name="judul">
                     </div>
+<<<<<<< HEAD
                      <textarea type="text" class="form-control " rows="20" placeholder="Konten" name="isi"></textarea>
+=======
+                     <textarea class="form-control " rows="20" placeholder="Konten" name="isi"></textarea>
+>>>>>>> origin/master
                      <br>
                      <button type="submit" class="btn btn-theme05 " style = "width :150px">Send</button>
                 </form>                   
