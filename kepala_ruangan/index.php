@@ -104,7 +104,7 @@ if(!isset($_SESSION['nip'])){
                     <td style="width:10%"></td>
                     <td><p class="left" width="60"><a href="profile.html"><img src="assets/img/ui-sam.jpg"width="60"></a></p></td>
                     <td style="width:10%"></td>
-                    <td><h5>Perawat n</h5></td>
+                    <td><h5><?php echo $nama; ?></h5></td>
                   </tr>
                   </table>
                     
@@ -144,8 +144,8 @@ if(!isset($_SESSION['nip'])){
                       </a>
                     </li>
                     <li class="sub-menu">
-                      <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_sertifikasi"){echo "active";}?>" href="index.php?pages=input_sertifikasi">
-                          <span>Input Sertifikasi </span>
+                       <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>" href="index.php?pages=grafik_pasien">
+                          <span>Grafik Pasien</span>
                       </a>
                     </li>
                     <li class="sub-menu">
@@ -180,9 +180,6 @@ if(!isset($_SESSION['nip'])){
               case "input_jadwal2":
               include "imput_jadwal2.php";
               break;
-              case "grafik_pasien":
-              include "grafik_pasien.php";
-              break;
               case "lihat_pasien":
               include "lihat_pasien.php";
               break;
@@ -215,6 +212,9 @@ if(!isset($_SESSION['nip'])){
               break;
               case "ubah_jadwal":
               include "ubah_jadwal.php";
+              break;
+              case "grafik_pasien":
+              include "graph/grafik.php";
               break;
             }
       ?>

@@ -13,9 +13,7 @@
                               </tr>
                               </thead>
                               <tbody>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
+                                  <?php include "proses/p_lihatartikel.php"; ?> 
                               </tbody>
                           </table>
                           </section>
