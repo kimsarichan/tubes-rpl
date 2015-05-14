@@ -1,9 +1,8 @@
 <section id="main-content">
   <section class="wrapper">
     <div class="col-lg-12">  
-      <br><br><br>
-               
-        </div><!-- /col-lg-12 -->
+      <br><br><br> 
+    </div><!-- /col-lg-12 -->
       <div class="row ">
         <div class="col-lg-12">
           <div class="form-panel">
@@ -25,7 +24,7 @@
                      <div class="form-group">
                         <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Masukan  Judul" name="judul">
                     </div>
-                     <textarea class="form-control " rows="20" placeholder="Konten" name="isi"></textarea>
+                     <textarea type="text" class="form-control " rows="20" placeholder="Konten" name="isi"></textarea>
                      <br>
                      <button type="submit" class="btn btn-theme05 " style = "width :150px">Send</button>
                 </form>                   

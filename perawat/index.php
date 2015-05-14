@@ -120,7 +120,7 @@ if(!isset($_SESSION['nip'])){
                       </a>
                     </li>
                     <li class="sub-menu">
-                      <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>" href="#">
+                      <a  class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>" href="index.php?pages=grafik_pasien">
                           <span>Grafik Pasien</span>
                       </a>
                     </li>
@@ -174,6 +174,7 @@ if(!isset($_SESSION['nip'])){
               break;
               case "grafik_pasien":
               include "graph/grafik.php";
+              break;
               case "lihat_pesan":
               include "lihat_pesan.php";
               break;
@@ -218,9 +219,9 @@ if(!isset($_SESSION['nip'])){
         $(document).ready(function () {
         var unique_id = $.gritter.add({
             // (string | mandatory) the heading of the notification
-            title: 'Welcome to Dashgum!',
+            title: 'Welcome to SIDRA!',
             // (string | mandatory) the text inside the notification
-            text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo. Free version for <a href="http://blacktie.co" target="_blank" style="color:#ffd777">BlackTie.co</a>.',
+            text: 'HI <<?php echo $nama ?>',
             // (string | optional) the image to display on the left
             image: 'assets/img/ui-sam.jpg',
             // (bool | optional) if you want it to fade out on its own or just sit there

@@ -1,7 +1,6 @@
 <section id="main-content" style="height:800px">
       <section class="wrapper">
-            <div class="col-lg-12">    
-                                   
+            <div class="col-lg-12">                     
                       <h4><i class="fa fa-angle-right"></i> Artikel </h4>
                           <section id="unseen">
                             <table class="table table-bordered table-striped table-condensed">
@@ -32,9 +31,6 @@
                           </section>
                </div>
             </div>
-
         </div><!-- /row -->
-      
-
     </section><! --/wrapper -->
 </section><!-- /MAIN CONTENT -->

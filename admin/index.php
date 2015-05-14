@@ -109,7 +109,8 @@ if(!isset($_SESSION['nip'])){
                       <a class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_pasien" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_pasien" or ($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>" href=""> Manajemen Pasien</a>
                          <ul class="sub">
                             <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=input_pasien"){echo "active";}?>"><a  href="index.php?pages=input_pasien">Input Pasien</a></li>
-                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>"><a   href="index.php?pages=grafik_pasien">Grafik Pasien </a></li>
+                            <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=grafik_pasien"){echo "active";}?>">
+                          <a  href="index.php?pages=grafik_pasien">Grafik Pasien</a></li>
                             <li class="<?php if (($_SERVER['REQUEST_URI'])== "$_SERVER[PHP_SELF]?pages=lihat_pasien"){echo "active";}?>"><a href="index.php?pages=lihat_pasien">Lihat Pasien </a></li>
                           </ul>
                     </li>
@@ -195,6 +196,9 @@ if(!isset($_SESSION['nip'])){
               break;
               case "input_artikel":
               include "input_artikel.php";
+              break;
+               case "grafik_pasien":
+              include "graph/grafik.php";
               break;
 
            }

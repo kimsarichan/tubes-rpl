@@ -1,0 +1,98 @@
+.code-sample,
+.details-list {
+    margin-top: 5px;
+    margin-bottom: 5px;
+	padding: 0;
+    border: 1px solid #dadada;
+    background: #fbfbfb;
+    color: #000;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0 7px #dadada inset;
+	-webkit-box-shadow: 0 0 7px #dadada inset;
+	-o-box-shadow: 0 0 7px #dadada inset;
+	box-shadow: 0 0 7px #dadada inset;
+}
+
+.bodyText h4.details-title, 
+.bodyText h4.code-title {
+    padding: 10px 10px 3px 10px;
+	font-weight: bold;
+    color: #656565;
+}
+
+.prettyprint {
+	overflow-x: auto;
+    font-size: 12px;
+}
+
+.prettyprint,
+.details-list dl {
+    padding: 10px;
+    margin: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.code-sample .prettyprint,
+.details-list dl {
+    padding: 10px;
+    border: 0;
+}
+
+.code-sample.code pre {
+    display:block;
+    padding:0;
+}
+
+pre .nocode { background-color: transparent; color: #000; }
+pre .str,                    /* string */
+pre .atv { color: #e25000; } /* attribute value */
+pre .kwd { color: #0033ff; } /* keyword */
+pre .com { color: #666666; } /* comment */
+pre .typ { color: #000; } /* type */
+pre .lit { color: #006666; } /* literal */
+pre .pun { color: #333; }    /* punctuation */
+pre .pln { color: #42545a; }    /* plaintext */
+pre .tag { color: #0066cc; } /* html/xml tag */
+pre .atn { color: #6666ff; } /* attribute name */
+pre .dec { color: #cc0000; } /* decimal */
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #333; }
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+li.L1,li.L3,li.L5,li.L7,li.L9 { background: #eee; }
+
+.details-list dl {
+    overflow: hidden;
+    margin:  0 10px;
+    padding: 0;
+    background-color: none;
+    border-top: 1px solid #dadada;
+    font-size: 12px;
+}
+
+.details-list dt,
+.details-list dd {
+	display: block;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.details-list dt {
+    clear: left;
+    float: left;
+    width: 50%;
+    overflow:auto;
+    font-weight: bold;
+}
+.details-list dd {
+	margin-left: 10px;
+    padding-left: 50%;
+}
+
+.details-list dt code {
+    font-weight: normal;
+}
