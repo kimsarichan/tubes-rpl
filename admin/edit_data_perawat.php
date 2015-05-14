@@ -9,14 +9,27 @@ $query=mysql_query("select * from perawat where nip='".$_GET['nip']."' LIMIT 1")
   $email=$data['email'];
   $jabatan=$data['jabatan'];
   $noTelepon=$data['noTelepon'];
-  $otoritas=$data['otoritas'];
   $alamat=$data['alamat'];
   $masajabatan=$data['masaJabatan'];
-??>
+?>
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
             <h1>Edit Data</h1>
+            <?php
+              if(isset($_GET['status'])){
+                if($_GET['status']=="success"){
+                  echo "Data berhasil diubah";
+                }elseif ($_GET['status']=="failed") {
+                  echo "Data gagal diubah";
+                }elseif ($_GET['status']=="nodata") {
+                  echo "isi bagian yang nama, tanggal, jenis kelamin,email,notelepon,password";
+                }elseif ($_GET['status']=="notint") {
+                  echo "Nomor telepon harus diisi dengan angka";
+                }
+              }
+
+            ?>
             <div class="row mt">
               <div class="col-lg-8">
                   <div class="form-panel">
@@ -65,9 +78,6 @@ $query=mysql_query("select * from perawat where nip='".$_GET['nip']."' LIMIT 1")
                               </div>
                                <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">otoritas</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="otoritas" value="<?php echo $otoritas; ?>">
-                              </div>
 							                <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">No Telepon</label>
                               <div class="col-sm-10">

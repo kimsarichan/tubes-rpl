@@ -47,9 +47,18 @@ if(!isset($_SESSION['nip'])){
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../kepala_ruangan/assets/js/codebase/dhtmlxcombo.css"/>
+    <script src="../kepala_ruangan/assets/js/codebase/dhtmlxcombo.js"></script>
+    <script>
+        var myCombo, myCombo2;
+        function doOnLoad() {
+            myCombo2 = dhtmlXComboFromSelect("combo");
+            myCombo2.enableFilteringMode(true);
+        }
+    </script>
   </head>
 
-  <body>
+  <body onload="doOnLoad();">
 
   <section id="container" >
       <!-- **********************************************************************************************************************************************************

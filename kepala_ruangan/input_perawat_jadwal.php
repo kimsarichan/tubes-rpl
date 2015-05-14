@@ -17,7 +17,6 @@
                 <div class="form-group">
                     <?php
                         include "../koneksi.php";
-                        
                         $jam=str_replace("%3A", ":", $_GET['jam']);
                         $tanggal=$_GET['tanggal']." ".$jam;
                         echo "<input type='hidden' name='tanggal' value='$tanggal'>";

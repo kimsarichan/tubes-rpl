@@ -1,6 +1,27 @@
       <section id="main-content">
           <section class="wrapper">
-            <h1>Input Ruangan</h1>
+            <?php
+               if(isset($_GET['act'])){
+                if($_GET['act']=='edit'){
+                  $select=mysql_query("select * from ruang where noRuang='$_GET[num]'");
+                  $data=mysql_fetch_array($select);
+                  $nama="value='$data[1]'";
+                  $no="value='$data[0]'";
+                  $kapasitas="value='$data[2]'";
+                  $link="proses/p_edit_ruang.php";
+                  $hidden="<input type='hidden' name='tmpno' value='$data[0]'>";
+                  echo "<h1>Edit Ruangan</h1>";
+                }
+              }else{
+                  $hidden="";
+                  $nama="";
+                  $no="";
+                  $kapasitas="";
+                  $link="proses/p_input_ruang.php";
+                  echo "<h1>Input Ruangan</h1>";
+              }
+            ?>
+            
             <div class="row mt">
               <div class="col-lg-8">
                   <div class="form-panel">
@@ -18,24 +39,9 @@
                           echo "Ruangan berhasil dimasukan";
                         }elseif($_GET['status']=="failed"){
                           echo "Ruangan gagal dimasukan";
+                        }elseif($_GET['status']=="zerofailed"){
+                          echo "nomor tidak boleh 0";
                         }
-                      }
-                      if(isset($_GET['act'])){
-                        if($_GET['act']=='edit'){
-                          $select=mysql_query("select * from ruang where noRuang='$_GET[num]'");
-                          $data=mysql_fetch_array($select);
-                          $nama="value='$data[1]'";
-                          $no="value='$data[0]'";
-                          $kapasitas="value='$data[2]'";
-                          $link="proses/p_edit_ruang.php";
-                          $hidden="<input type='hidden' name='tmpno' value='$data[0]'>";
-                        }
-                      }else{
-                          $hidden="";
-                          $nama="";
-                          $no="";
-                          $kapasitas="";
-                          $link="proses/p_input_ruang.php";
                       }
                     ?>
                     <form class="form-horizontal style-form" method="post" action="<?php echo $link ?>">

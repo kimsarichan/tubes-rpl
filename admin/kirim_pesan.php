@@ -1,4 +1,4 @@
-<section id="main-content">
+<section id="main-content" onload="doOnLoad();">
   <section class="wrapper">
     <div class="col-lg-12">  
       <br><br><br>
@@ -8,13 +8,29 @@
     		<div class="col-lg-12">
     			<div class="form-panel">
             	  <h4 class="mb"><i class="fa fa-angle-right"></i> Kirim Pesan</h4>
-                 <form role="form">
+                <?php
+                    if(isset($_GET['status'])){
+                      if($_GET['status']=="success"){
+                        echo "Pesan berhasil terkirim";
+                      }else if ($_GET['status']=="failed"){
+                        echo "Pesan gagal terkirim";
+                      }
+                    }
+                ?>
+                 <form role="form" method="post" action="proses/p_pesan.php">
                      <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Masukan nama perawat">
+                        <select id="combo" name="perawat" style="width:230px;">
+                          <?php
+                            $select=mysql_query("select*from perawat where otoritas<>'admin' and status=1");
+                            while($data=mysql_fetch_array($select)){
+                              echo "<option value='$data[0]'>$data[nama]</option>";
+                            }
+                          ?>
+                        </select>
                     </div>
-                     <textarea type="text" class="form-control " rows="5"></textarea>
+                     <textarea type="text" class="form-control " rows="5" name="pesan"></textarea>
                      <br>
-                     <button type="button" class="btn btn-theme05 " style = "width :150px">Send</button>
+                     <button type="submit" class="btn btn-theme05 " style = "width :150px">Send</button>
                 </form>                   
     			</div><!-- /form-panel -->
     		</div><!-- /col-lg-12 -->

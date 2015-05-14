@@ -9,12 +9,19 @@ $jabatan=$_POST['jabatan'];
 $masajabatan=$_POST['masaJabatan'];
 $telepon=$_POST['telepon'];
 $email=$_POST['email'];
-$otoritas=$_POST['otoritas'];
 $base_url=explode("?", $_SERVER['HTTP_REFERER']);
-$update=mysql_query("update perawat set nama='$nama',otoritas='$otoritas', tanggalLahir='$tanggallahir', alamat='$alamat', jeniskelamin='$jk', jabatan='$jabatan', masaJabatan='$masajabatan', noTelepon='$telepon', email='$email' where nip='$nip'");
-if($update){
-	header ("Location: $base_url[0]?pages=edit_perawat&&nip=$nip&&status=success");
+if($nama=="" or $tanggallahir=="" or $jk=="" or $email=="" or $telepon=="" or $masajabatan=="" or 
+	$jabatan==""){
+	header("Location: $base_url[0]?pages=edit_perawat&nip=$nip&status=nodata");
+}elseif(!is_numeric($telepon)){
+	header("Location: $base_url[0]?pages=edit_perawat&nip=$nip&status=notint");
 }else{
-	header ("Location: $base_url[0]?pages=edit_perawat&&nip=$nip&&status=failed");
+	$update=mysql_query("update perawat set nama='$nama',otoritas='$otoritas', tanggalLahir='$tanggallahir', alamat='$alamat', jeniskelamin='$jk', jabatan='$jabatan', masaJabatan='$masajabatan', noTelepon='$telepon', email='$email' where nip='$nip'");
+	if($update){
+		header ("Location: $base_url[0]?pages=edit_perawat&&nip=$nip&&status=success");
+	}else{
+		header ("Location: $base_url[0]?pages=edit_perawat&&nip=$nip&&status=failed");
 }
+}
+
 ?>

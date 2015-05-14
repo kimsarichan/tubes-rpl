@@ -1,6 +1,21 @@
       <section id="main-content">
           <section class="wrapper">
             <h1>Input Pasien</h1>
+            <?php
+              if(isset($_GET['status'])){
+                if($_GET['status']=="success"){
+                  echo "Pasien berhasil diinput";
+                }elseif ($_GET['status']=="failed") {
+                  echo "Pasien gagal diinputkan";
+                }elseif ($_GET['status']=="nodata") {
+                  echo "Semua form harus diisi";
+                }elseif ($_GET['status']=="negativeumur") {
+                  echo "Umur tidak boleh kurang dari 0";
+                }elseif ($_GET['status']=="noint") {
+                  echo "Umur harus berupa angka";
+                }
+              }
+            ?>
             <div class="row mt">
               <div class="col-lg-8">
                   <div class="form-panel">
