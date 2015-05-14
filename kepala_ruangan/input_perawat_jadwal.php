@@ -20,8 +20,7 @@
                         $jam=str_replace("%3A", ":", $_GET['jam']);
                         $tanggal=$_GET['tanggal']." ".$jam;
                         echo "<input type='hidden' name='tanggal' value='$tanggal'>";
-                        echo "<input type='hidden' name='ruang' value='$_GET[ruang]'>";
-                        $select=mysql_query("select nip,nama from perawat where otoritas<>'admin' and otoritas<>'kepalaRuang'");
+                        $select=mysql_query("select nip,nama from perawat where otoritas<>'admin' and otoritas<>'kepalaRuang' and noRuang=(select noruang from ruang where kepalaRuang='$_SESSION[nip]' LIMIT 1)");
                         echo "<select id='combo' name='perawat' style='width:230px;'>";
                         $count=0;
                         while($data=mysql_fetch_array($select)){

@@ -18,9 +18,7 @@
                               <thead>
                               <tr>
                                   <th>No</th>
-                                  <th>Nama Perawat</th>
-                                  <th >NIP</th>
-                                  <th >Konfirmasi </th>
+                                  <th>Tanggal dan Jam</th>
                               </tr>
                               </thead>
                               <tbody>
@@ -32,14 +30,13 @@
                                 }else{
                                     $nama="";
                                 }
-                                $select=mysql_query("select*from perawat where status=true and nama like '%$nama%' and otoritas<>'admin' and otoritas<>'kepalaRuang' and noRuang=(select noruang from ruang where kepalaRuang='$_SESSION[nip]' LIMIT 1)");
+                                $select=mysql_query("select*from jadwal where NIP='$_GET[nip]'");
                                 $no=1;
                                 while($data=mysql_fetch_array($select)){
                                  echo  "<tr>
                                   <td>$no</td>
-                                  <td>$data[nama]</td>
-                                  <td >$data[NIP]</td>
-                                  <td><a href='#'>Detail</a>|<a href='$url[0]?pages=lihat_jadwal&nip=$data[NIP]'>Lihat Jadwal</a></td>
+                                  <td>$data[tanggalJam]</td>
+                                  <td><a href='$url[0]?pages=edit_jadwal&id=$data[0]'>Edit Jadwal</a></td>
                               </tr>";   
                               $no++; 
                               }

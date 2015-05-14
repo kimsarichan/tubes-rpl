@@ -216,6 +216,9 @@ if(!isset($_SESSION['nip'])){
               case "grafik_pasien":
               include "graph/grafik.php";
               break;
+              case "lihat_jadwal":
+              include "lihat_jadwal_perawat.php";
+              break;
             }
       ?>
       

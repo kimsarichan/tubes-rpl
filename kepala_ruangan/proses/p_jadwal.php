@@ -1,18 +1,13 @@
 <?php
 include "../../koneksi.php";
 	$insert=mysql_query("insert into jadwal (tanggalJam,NIP) values ('$_POST[tanggal]','$_POST[perawat]')");
-	$select=mysql_query("select idJadwal from jadwal order by idJadwal desc LIMIT 1");
 	$data=mysql_fetch_array($select);
-	echo $root[1];
+	$url=explode("?", $_SERVER['HTTP_REFERER']);
+	$ex=explode(" ", $_POST['tanggal']);
+	$jam=str_replace(":", "%3A", $ex[1]);
 	if($insert){
-		echo $data[0];
-		echo $_POST['ruang'];
-		$insert2=mysql_query("INSERT INTO memiliki (noRuang, idJadwal) VALUES ('$_POST[ruang]', '$data[0]')")or die (mysql_error()) ;
-		if($insert2){
-			header ("Location: $_SERVER[HTTP_REFERER]&status=success");
-		}else{
-			header ("Location: $_SERVER[HTTP_REFERER]&status=failed");
-		}
+		header ("Location: $url[0]?pages=input_perawat_jadwal&tanggal=$ex[0]&jam=$jam&status=success");
 	}else{
-		header ("Location: $_SERVER[HTTP_REFERER]&status=failed");
+		header ("Location: $url[0]?pages=input_perawat_jadwal&tanggal=$ex[0]&jam=$jam&status=failed");
+	}
 ?>
