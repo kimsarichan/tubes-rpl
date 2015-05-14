@@ -17,7 +17,12 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-
+          <!-- Date Picker -->
+    <link rel="stylesheet" href="assets/css/calender.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -69,24 +74,33 @@
 	                                  <input type="password" name="retype" class="form-control">
 	                              </div>
 	                              <br><br><br>
-	                              <label class="col-sm-2 col-sm-2 control-label">Alamat</label>
+	                              <label class="col-sm-2 col-sm-2 control-label">Email</label>
 	                              <div class="col-sm-10">
-	                                  <input type="text" name="alamat" class="form-control">
+	                                  <input type="email" name="email" class="form-control">
 	                              </div>
+	                              <br><br><br>
+                                  <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
+                                <div class = "col-sm-10">
+                                  <div class="input-group date form_date col-sm-10" style="margin-left=10px" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style ="margin-left=50px;">
+                                  <input class="form-control" size="10" type="text" name="tanggal">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                  </div>
+                               </div>
+
+                               <div class = "row">
+                              </div>
+                              <br>
+                              <label class="col-sm-2 col-sm-2 control-label">Alamat</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="alamat" class="form-control">
+                                </div>
 	                              <br><br><br>
 	                              <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
 	                              <div class="col-sm-10">
-	                                  <input type="text" name="jk" class="form-control">
-	                              </div>
-	                              <br><br><br>
-	                              <label class="col-sm-2 col-sm-2 control-label">Email</label>
-	                              <div class="col-sm-10">
-	                                  <input type="text" name="email" class="form-control">
-	                              </div>
-	                              <br><br><br>
-	                              <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
-	                              <div class="col-sm-10">
-	                                  <input type="text" name="tanggal" class="form-control">
+	                                <select class="form-control" name="jk">
+	                                    <option value="l" >Laki Laki</option>
+	                                    <option value="p">Perempuan</option>
+	                                </select>
 	                              </div>
 	                              <br><br><br>
 	                              <label class="col-sm-2 col-sm-2 control-label">No Telepon</label>
@@ -118,6 +132,22 @@
     <script>
         $.backstretch("assets/img/login-bg.jpg", {speed: 500});
     </script>
+      <!--test datepicker java script-->
+    <script type="text/javascript" src="assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="assets/js/locales/bootstrap-datetimepicker.id.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+     $('.form_date').datetimepicker({
+            language:  'id',
+            weekStart: 1,
+            todayBtn:  1,
+      autoclose: 1,
+      todayHighlight: 1,
+      startView: 2,
+      minView: 2,
+      forceParse: 0
+        });
+    </script>
+
 
 
   </body>
