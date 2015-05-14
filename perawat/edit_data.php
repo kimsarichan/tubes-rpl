@@ -11,6 +11,8 @@
                           echo "Data berhasil diubah";
                         }elseif ($_GET['status']=="failed") {
                           echo "Data gagal diubah";
+                        }elseif ($_GET['status']=="nodata") {
+                          echo "isi bagian yang nama, tanggal, jenis kelamin,email,notelepon,password";
                         }
                       }
 

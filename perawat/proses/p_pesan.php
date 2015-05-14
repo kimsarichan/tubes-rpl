@@ -16,10 +16,10 @@ if(isset($kepala)){
 }
 $url=explode("?",$_SERVER['HTTP_REFERER']);
 if($statusAdmin or $statuskepala){
-	header ("Location: $url[0]?pages=pesan&&status=success");
+	header ("Location: $url[0]?pages=kirim_pesan&&status=success");
 	echo "berhasil";
 }else{
-	header ("Location: $url[0]?pages=pesan&&status=failed");
+	header ("Location: $url[0]?pages=kirim_pesan&&status=failed");
 	echo "gagal";
 }
 
