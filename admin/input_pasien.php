@@ -11,6 +11,10 @@
                   echo "Semua form harus diisi";
                 }elseif ($_GET['status']=="negativeumur") {
                   echo "Umur tidak boleh kurang dari 0";
+                }elseif ($_GET['status']=="namaless3") {
+                  echo "Nama minimal harus lebih dari 3 karakter";
+                }elseif ($_GET['status']=="namaforbidden") {
+                  echo "nama tidak boleh mengandung angka ";
                 }elseif ($_GET['status']=="noint") {
                   echo "Umur harus berupa angka";
                 }

@@ -51,7 +51,18 @@
                             echo "Pendaftaran gagal, silahkan coba lagi";
                           }else if ($_GET['status']=="wp"){
                             echo "Password dan konformasi password salah, silahkan coba lagi";
+                          }elseif ($_GET['status']=="namanotenougth") {
+                            echo "Nama minimal harus lebih dari 3 karakter";
+                          }elseif ($_GET['status']=="passnotenougth") {
+                            echo "password minimal 6 karakter";
+                          }elseif ($_GET['status']=="namaforbidden") {
+                            echo "nama tidak boleh mengandung angka ";
+                          }elseif ($_GET['status']=="teleponforbidden") {
+                            echo "nomor telepon tidak boleh mengandung huruf ";
+                          }elseif ($_GET['status']=="alamatforbidden") {
+                            echo "alamat harus diisi lebih dari 10 karakter ";
                           }
+
                         }else{
                           echo "";
                         }

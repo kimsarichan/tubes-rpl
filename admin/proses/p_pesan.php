@@ -7,12 +7,15 @@ echo $admin;
 echo $kepala;
 $insert=mysql_query("insert into pesan values ('','$pesan','$perawat','$_SESSION[nip]',false)");
 $url=explode("?",$_SERVER['HTTP_REFERER']);
-if($insert){
-	header ("Location: $url[0]?pages=kirim_pesan&&status=success");
-	echo "berhasil";
+if($pesan==""){
+	header ("Location: $url[0]?pages=kirim_pesan&&status=empty");
 }else{
-	header ("Location: $url[0]?pages=kirim_pesan&&status=failed");
-	echo "gagal";
+	if($insert){
+		header ("Location: $url[0]?pages=kirim_pesan&&status=success");
+		echo "berhasil";
+	}else{
+		header ("Location: $url[0]?pages=kirim_pesan&&status=failed");
+		echo "gagal";
+	}
 }
-
 ?>

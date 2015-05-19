@@ -13,9 +13,9 @@
                 }
             }
         ?>
-          <form class="form-horizontal style-form" method="GET" action="proses/edit_jadwal.php">
+          <form class="form-horizontal style-form" method="post" action="proses/p_edit_jadwal.php">
                 <div class="form-group">
-                    <input type="hidden" name="pages" value="input_perawat_jadwal" />
+                    <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>" />
                     <label class="col-sm-2 col-sm-2 control-label">Tanggal</label>
                     <div class="input-group date form_date col-sm-8" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style ="margin-left=50px;">
                         <input class="form-control" size="10" type="text" name="tanggal">

@@ -219,6 +219,9 @@ if(!isset($_SESSION['nip'])){
               case "lihat_jadwal":
               include "lihat_jadwal_perawat.php";
               break;
+              case "edit_jadwal":
+              include "edit_jadwal.php";
+              break;
             }
       ?>
       

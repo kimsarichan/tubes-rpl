@@ -14,6 +14,8 @@
                         echo "Pesan berhasil terkirim";
                       }else if ($_GET['status']=="failed"){
                         echo "Pesan gagal terkirim";
+                      }else if ($_GET['status']=="empty"){
+                        echo "Pesan harus diisi";
                       }
                     }
                 ?>

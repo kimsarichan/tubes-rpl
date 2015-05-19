@@ -18,6 +18,7 @@ if($sum>0){
 		header ("Location:http://$_SERVER[HTTP_HOST]/$ex[1]/perawat");
 	}
 }else{
-	header("Location:$_SERVER[HTTP_REFERER]?status=failed");
+	$ref=explode("?", $_SERVER['HTTP_REFERER']);
+	echo "<script type='text/javascript'>window.alert('Username dan password tidak cocok');window.location='$ref[0]?status=failed'</script>";
 }
 ?>

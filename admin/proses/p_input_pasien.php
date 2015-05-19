@@ -12,6 +12,10 @@ if($nama=="" or $umur=="" or $jk=="" or $diagnosis=="" or $noruang==""){
 	header("Location: $url[0]?pages=input_pasien&status=negativeumur");
 }elseif(!is_numeric($umur)){
 	header("Location: $url[0]?pages=input_pasien&status=noint");
+}elseif (strlen($nama)<4) {
+	header("Location:$base_url[0]?pages=input_pasien&status=namaless3");
+}elseif(preg_match('/[0-9]+/', $nama)){
+	header("Location:$base_url[0]?pages=input_pasien&status=namaforbidden");
 }else{
 	$query=mysql_query("insert into pasien values ('', '$nama', '$umur', '$jk','$diagnosis', '$noruang')");
 	if($query){

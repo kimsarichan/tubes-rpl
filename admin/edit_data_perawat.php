@@ -26,6 +26,12 @@ $query=mysql_query("select * from perawat where nip='".$_GET['nip']."' LIMIT 1")
                   echo "isi bagian yang nama, tanggal, jenis kelamin,email,notelepon,password";
                 }elseif ($_GET['status']=="notint") {
                   echo "Nomor telepon harus diisi dengan angka";
+                }elseif ($_GET['status']=="namaless3") {
+                  echo "Nama minimal harus lebih dari 3 karakter";
+                }elseif ($_GET['status']=="namaforbidden") {
+                  echo "nama tidak boleh mengandung angka ";
+                }elseif ($_GET['status']=="alamatless10") {
+                  echo "alamat harus diisi lebih dari 10 karakter ";
                 }
               }
 

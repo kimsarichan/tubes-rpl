@@ -13,6 +13,14 @@
                           echo "Data gagal diubah";
                         }elseif ($_GET['status']=="nodata") {
                           echo "isi bagian yang nama, tanggal, jenis kelamin,email,notelepon,password";
+                        }elseif ($_GET['status']=="notint") {
+                          echo "Nomor telepon harus diisi dengan angka";
+                        }elseif ($_GET['status']=="namaless3") {
+                          echo "Nama minimal harus lebih dari 3 karakter";
+                        }elseif ($_GET['status']=="namaforbidden") {
+                          echo "nama tidak boleh mengandung angka ";
+                        }elseif ($_GET['status']=="alamatless10") {
+                          echo "alamat harus diisi lebih dari 10 karakter ";
                         }
                       }
 
@@ -49,7 +57,12 @@
                               <div class="col-sm-10">
                                   <input type="text" class="form-control" disabled value="<?php echo $jabatan; ?>">
                               </div>
-							  <br><br><br>
+							                 <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Alamat</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" name="alamat" value="<?php echo $alamat; ?>">
+                              </div>
+                              <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">No Telepon</label>
                               <div class="col-sm-10">
                                   <input type="text" class="form-control" value="<?php echo $noTelepon; ?>" name="noTelepon">

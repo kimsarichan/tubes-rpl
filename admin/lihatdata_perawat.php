@@ -96,7 +96,8 @@
                           <input type="text"placeholder="" disabaled class="form-control" disabled>
                       </div>
                   </form>
-                  </div>
+                  </div> 
+                  <?php } ?>
                               </tbody>
                           </table>
 
@@ -105,7 +106,7 @@
         </div>
       </div>
     </div><!-- /row -->
-  <?php } ?>
+ 
 <style type="text/css">
     .modalDialog {
   position: fixed;

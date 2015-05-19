@@ -12,6 +12,30 @@
               </div><!-- /col-lg-12 -->
             <div class="col-lg-12">    
               <h4><i class="fa fa-angle-right"></i> Table Perawat </h4>
+              <?php
+                if(isset($_GET['status'])){
+                          if($_GET['status']=="nodata"){
+                            echo "isi bagian yang nama, tanggal, jenis kelaminmemail,notelepon,password";
+                          }else if ($_GET['status']=="failed"){
+                            echo "Verifikasi gagal, silahkan coba lagi";
+                          }else if ($_GET['status']=="whitenip"){
+                            echo "NIP tidak boleh diisi hanya dengan spasi";
+                          }elseif ($_GET['status']=="masafailed") {
+                            echo "Harus diisi dengan angka saja";
+                          }elseif ($_GET['status']=="whitejabatan") {
+                            echo "Jabatan tidak boleh diisi hanya dengan spasi saja";
+                          }elseif ($_GET['status']=="namaforbidden") {
+                            echo "nama tidak boleh mengandung angka ";
+                          }elseif ($_GET['status']=="emptyfield") {
+                            echo "Form harus diisi semua";
+                          }elseif ($_GET['status']=="success") {
+                            echo "Verifikasi berhasil";
+                          }
+
+                        }else{
+                          echo "";
+                        }
+              ?>
                   <section id="unseen">
                     <table class="table table-bordered table-striped table-condensed">
                       <thead>
@@ -92,8 +116,8 @@
                           <select name="ruang">
                             <?php
                               include "../koneksi.php";
-                              $select=mysql_query("select * from ruang");
-                              while($data=mysql_fetch_array($select)){
+                              $select1=mysql_query("select * from ruang");
+                              while($data=mysql_fetch_array($select1)){
                                 echo "<option value='$data[0]'>$data[1]</oSption>";
                               }
                             ?>
@@ -104,15 +128,14 @@
                    <button type="submit" class="btn btn-theme05 " style = "width :150px">Verifikasi</button>
             </form>
         </div>
-  </div>
 </div><?php } ?>
                 </tbody>
             </table>
-          <div class="col-lg-4"></div>  
-          </section>
-       </div>
-    </div>
-</div><!-- /row -->
+          </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /row -->
 
 
 
